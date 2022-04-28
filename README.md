@@ -1,7 +1,7 @@
 # JavaScript_para_Burros
 Projeto JavaScript para Burros - Documentação com o objetivo de ensinar/explicar a linguagem JavaScript da forma mais simples possível e sem muitos termos técnicos.
 
-Url: https://rosivaldocamjr.github.io/JavaScript_para_Burros/
+Url do Site Pronto: https://rosivaldocamjr.github.io/JavaScript_para_Burros/
 
 ![image](https://user-images.githubusercontent.com/91435382/165677209-488d2220-f8ed-4684-a5ed-28f0eb738786.png)
 
