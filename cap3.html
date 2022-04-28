@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap 3 - JavaScript Básico</title>
+    <link rel="stylesheet" href="css/paginaInicial.css">
+</head>
+<body>
+    <div id="div">
+        <div id="voltar-pag-inicial">
+            <a href="index.html">Voltar p/ Página Inicial</a>
+        </div>
+        <h2>JavaScript Básico</h2>
+        <p>Agora veremos os conceitos iniciais da linguagem JavaScript, mas primeiramente devemos conhecer um comando importante em Html chamado <span>input</span>.</p><br>
+        <p>O elemento HTML <span>input</span> é uma forma de <span>entrada de dados</span>, é usado para criar controles interativos para formulários baseados na web para receber dados do usuário. A semântica de um input varia consideravelmente dependendo do valor de seu atributo <span>type</span>.</p><br>
+        <p>Iremos ver exemplos com input do tipo <span>text</span> e do tipo <span>button</span>, porém existem muitos outros tipos.</p><br>
+        <p>Tipo text (input type="text")</p><br>
+        <p><img src="img/cap03/input_text.png" alt="Imagem"></p><br>
+        <p>Tipo button (input type="button" value="Mostrar")</p><br>
+        <p><img src="img/cap03/input_button.png" alt="Imagem"></p><br>
+        <p>Na página inicial (cap 1) mostramos dois método em javascript, o <span>alert</span> e o <span>prompt</span>. Tais códigos foram escritos dentro do arquivo <span>index.html</span>, entre a <span>tag script</span>.</p><br>
+        <p><img src="img/cap01/entrada_vscode.png" alt="Imagem"></p><br>
+        <p>Porém a forma que os profissionais escrevem códigos em javascript é criando um arquivo com a extensão <span>.js</span>, e no final da <span>tag body</span> (em html) o arquivo é <span>linkado</span>.</p><br>
+        <p><img src="img/cap03/linkando_script.png" alt="Imagem"></p><br>
+        <p>Agora iremos criar um pequeno programa que mostrará o nome digitado. Através desse programa aprenderemos novos conceitos em JavaScript.</p><br>
+        <p><img src="img/cap03/programa_ola_voce.png" alt="Imagem"></p><br>
+        <p>O objetivo desse programa é, ao digitar o seu nome na caixa <span>(input type text)</span> e clicar no botão Mostrar, o nome digitado apareça na saída "Local onde aparecerá o nome".</p><br>
+        <p>Tudo que está aparecendo no site foi feito dentro do arquivo <span>index.html</span>. O único código que será feito dentro do arquivo <span>script.js</span> é a função do botão mostrar.</p><br>
+        <p><img src="img/cap03/programa_ola_voce_html.png" alt="Imagem"></p><br>
+        <p>Note que dentro dos dois <span>input's</span> temos  o uso de <span>id's</span>. Também temos um <span>id</span> dentro do segundo parágrafo <span>(p)</span>. Essas <span>id's</span> servem de referência (também chamadas de identificadores), caso precise chamá-las dentro de um arquivo script.</p><br>
+        <p>O botão em si não faz nada. A ele se deve inserir uma função, que em javascript se chama <span>function</span>. Uma função contém um conjunto de comandos que realizam uma ação. Os comandos que pertencem a uma função devem estar delimitados pelas chaves { }.</p><br>
+        <p>É uma boa prática de programação dar um nome para a função começando por um verbo. O uso do <span>CAMELCASE</span> (mostraNome ou mostrarPrimeiroNome) é também um padrão recomendado e facilita a compreensão da leitura do nome.</p><br>
+        <p>Para referenciar um elemento HTML identificado no documento, deve-se utilizar o método <span>getElementById( )</span>. Esse método permite referenciar qualquer elemento que esteja no arquivo HTML, como um input, um parágrafo, um botão, uma imagem, um título, etc.</p><br>
+        <p>Para que um elemento HTML seja referenciado, ele precisa conter um atributo <span>id</span>, como foi visto na imagem anterior, onde o input text tem o <span>id="nome"</span> e o input button tem o <span>id="mostrar"</span>.</p><br>
+        <p><img src="img/cap03/programa_ola_voce_script.png" alt="Imagem"></p><br>
+        <p>Comando na linha 2</p>
+        <p>document = é o documento HTML, que é a parte visível no site.</p>
+        <p><span>getElementById('nome')</span> = Está fazendo uma referência ao elemento HTML que tem o <span>id="nome"</span>. É um espécie de ligação.</p>
+        <p>Essa ligação/referência está sendo colocada dentro da variável <span>inputText</span>.</p><br>
+        <p>Comando na linha 3</p>
+        <p>Após a ligação ser feita, agora sim o valor que foi digitado dentro do input text é capturado (através da propriedade value) e armazenado dentro da variável <span>nome</span>.</p><br>
+        <p>Comando na linha 5</p>
+        <p>Aqui o comando não é colocado dentro de nenhuma variável. A referência (ligação) é feita com o elemento que tem o <span>id="saida"</span>.</p>
+        <p>A propriedade innerHTML é responsável por alterar o conteúdo de elementos de texto dentro do HTML. Então nesse caso, o elemento que possuir o <span>id="saida"</span> terá o seu conteúdo textual alterado para o texto que estiver armazenado dentro da variável <span>nome</span>.</p><br>
+        <p>Comando na linha 8</p>
+        <p>Aqui é feito a referência/ligação com o elemento que tem o <span>id="mostrar"</span>, que nesse caso é o botão Mostrar. Essa referência é colocada dentro da variável mostrar.</p><br>
+        <p>Comando na linha 9</p>
+        <p>Esse comando significa que na variável mostrar é executado um método chamado <span>addEventListener( )</span>.</p>
+        <p>Esse método é chamado de "ouvinte de eventos", ou seja, ele fica prestando atenção em que momento o evento é disparado. Nesse caso ele esta a ouvir o evento <span>click</span>.</p>
+        <p>Assim que o evento click é disparado, a função <span>mostrarNome</span> (criada anteriormente) é acionada.</p><br>
+        <p>No exemplo anterior, declaramos três variáveis. Em programas maiores, o número de variáveis vai ser maior também. É importante mantermos a organização dos nomes para uma melhor compreensão. Podemos perceber que as variáveis são utilizadas para fins diversos: texto de entrada de dados, referência a elementos e mais pra frente, referência a elementos de saída.</p><br>
+        <p>A partir dos próximos exemplos iremos atribuir aos <span>id's</span> (dentro do HTML), nomes que nos indiquem o seu uso no programa: <span>in</span> de input para campos de entrada de texto, <span>bt</span> de button para botões e <span>out</span> de output para os locais de saída de dados.</p><br>
+        <p>Ex: inNome, btMostrar e outSaída.</p><br>
+        <p>E dentro do arquivo javascript iremos manter essa mesma regra ao referenciar esses elementos.</p><br><br>
+        <h3>Funções Matemáticas em JavaScript (Math)</h3><br>
+        <p>Em certos momentos iremos realizar algumas operações matemáticas em javascript, e para isso utilizaremos o comando <span>Math</span>. Veremos agora algumas funções de <span>Math</span>.</p><br>
+        <p>Math.abs(numero) - retorna o valor absoluto de um número, se o valor for negativo, ele será convertido para positivo. Se for positivo, o valor permanece positivo.</p>
+        <p>Math.abs(-3), retorna 3</p><br>
+        <p>Math.ceil(numero) - arredonda o valor para cima. Se o valor possuir decimais, retorna o próximo número inteiro.</p>
+        <p>Math.ceil(4.2), retorna 5</p><br>
+        <p>Math.floor(numero) - arredonda o valor para baixo. Retorna a parte inteira do número.</p>
+        <p>Math.floor(7.9), retorna 7</p><br>
+        <p>Math.pow(base, expoente) - retorna a base elevada ao expoente.</p>
+        <p>Math.pow(3, 2), retorna 9</p><br>
+        <p>Math.random( ) - retorna um número aleatório entre 0 e 1, com várias casas decimais.</p>
+        <p>Math.random( ), retorna 0.65738436395</p><br>
+        <p>Math.round(numero) - arredonda o valor para o inteiro mais próximo. A partir de .5 na parte fracionária, o valor é arredondado pra cima. Anterior a .5, o valor é arredondado para baixo.</p>
+        <p>Math.round(2.7), retorna 3</p><br>
+        <p>Math.sqrt(numero) - retorna a raiz quadrada do número.</p>
+        <p>Math.sqrt(16), retorna 4</p><br><br>
+        <h3>Ordem de precedência dos operadores</h3><br>
+        <p>Nas expressões matemáticas devemos ter cuidado com a ordem de precedência dos operadores.</p><br>
+        <p>O resultado das expressões a seguir são diferentes:</p><br>
+        <p>(n1 + n2) * 3</p>
+        <p>n1 + n2 * 3</p><br>
+        <p>Veremos agora a ordem correta:</p><br>
+        <p>1º - Os parênteses redefinem a ordem das prioridades.</p><br>
+        <p>(n1 + n2) * 3</p><br>
+        <p>2º - As funções matemáticas ou funções criadas pelo usuário tem prioridades sobre os demais operadores aritméticos.</p><br>
+        <p>Math.sqrt(9) * 8 / 2</p><br>
+        <p>3º - Os operadores de multiplicação (*), divisão (/) e módulo (%), tem prioridade sobre os operadores de adição e subtração.</p><br>
+        <p>2 + 5 * 2</p><br>
+        <p>4º - Caso uma expressão contenha operadores do mesmo nível, o resultado é calculado da esquerda pra direita.</p><br>
+        <p>5 / 2 * 3</p><br>
+        <p><span>IMPORTANTE</span>: Você pode modificar a ordem de execução de qualquer expressão com a inserção de parênteses.</p><br><br>
+        <h3>Exercícios</h3><br>
+        <p><b>a )</b> Elabore um programa para uma vídeo locadora, que leia o título e a duração de um filme em minutos. Exiba o título do filme e converta a duração para horas e minutos, conforme destacado na imagem.</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_a1.png" alt="Imagem"></p><br>
+        <p><b>b )</b> Elabore um programa para uma revenda de veículos. O programa deve ler modelo e preço do veículo. Apresentar como resposta o valor da entrada (50%) e o saldo restante em 12x.</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_b1.png" alt="Imagem"></p><br>
+        <p><b>c )</b> Elabore um programa para um restaurante que leia o preço por kg e o consumo (em gramas) de um cliente. Exiba o valor a ser pago, conforme a imagem abaixo.</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_c1.png" alt="Imagem"></p><br>
+        <p><b>d )</b> Uma farmácia está com uma promoção. Na compra de duas unidades de um mesmo medicamento, o cliente recebe como desconto os centavos do valor total. Elabore um programa que leia a descrição e o preço de um medicamento. Informe o valor do produto na promoção.</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_d1.png" alt="Imagem"></p><br>
+        <p><b>e )</b> Elabore um programa para uma lan house. O programa deve ler o valor de cada 15 minutos de uso de um computador e o tempo de uso por um cliente em minutos. Informe o valor a ser pago pelo cliente, sabendo que as frações extras de 15 minutos devem ser cobradas de forma integral.</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_e1.png" alt="Imagem"></p><br>
+        <p><b>f )</b> Um supermercado está com uma promoção. Para aumentar suas vendas no setor de higiene, cada etiqueta de produto deve exibir uma mensagem anunciando 50% de desconto (para um item) na compra de três unidades do produto. Elabore um programa que leia descrição e preço de um produto. Após, apresente as mensagens indicando a promoção.</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_f1.png" alt="Imagem"></p><br><br>
+        <h3>Resolução dos Exercícios</h3><br>
+        <p><b>a )</b> Nesse arquivo html, temos três input's com <span>id's</span>. No final do arquivo temos dois elementos <span>p</span>, que serão a saída de dados. Note que não há conteúdo dentro deles. O conteúdo só aparecerá após todos os processamentos de dados. Logo em seguida temos o elemento script, que será responsável pela ligação com o arquivo javascript.</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_a2.png" alt="Imagem"></p><br>
+        <p>Aqui temos o arquivo <span>script.js</span>. Primeiramente temos as referências (ligação) feitas com os elementos no arquivo html. Tais referências só são possíveis devido ao <span>id</span> em cada elemento. Cada referência é armazenada em uma variável que possui o mesmo nome que o <span>id</span>.</p><br>
+        <p>A referência é feita através do comando <span>document.getElementById</span> que basicamente significa "pegar um elemento (pelo ID) dentro do documento HTML".</p><br>
+        <p>Logo em seguida temos o uso da propriedade <span>value</span> para capturar o valor que foi digitado dentro das caixas. Por padrão, esses <span>input's</span> do tipo text retornam uma string, então em <span>inDuracao.value</span> temos que converter a string em número com o uso do <span>Number( )</span>. Em seguida, os valores capturados sao armazenados em variáveis (titulo e duracao).</p><br>
+        <p>Para transformar os minutos em horas, é feito uma operação onde a duracao é dividida por 60. Porém queremos pegar apenas um número inteiro (as horas), como 1, 2 ou 3. Caso o valor da duracao seja de 65 minutos, ao dividir por 60 resultará em um número com casas decimais (1.083333...). Então usamos a função matemática <span>Math.floor</span>, que arredonda o valor para baixo e pega somente a parte inteira do número. Em seguida o valor é armazenado dentro da variável horas.</p><br>
+        <p>A próxima linha é responsável por pegar os minutos restantes. Para fazer isso, usa-se o sinal de <span>módulo (%)</span>, que tem a função de pegar somente o resto de uma divisão. Por exemplo, se a duração for de 65 minutos, ao dividir por 60, o resto será de 5. Entao esse resto será armazenado na variável minutos.</p><br>
+        <p>Agora com todos os valores em mãos (titulo, horas e minutos), chegou o momento de apresentá-los na saída de dados. Esses valores serão apresentados nos elementos <span>p's</span>, que se encontram no final do arquivo em <span>html</span>. O comando <span>innerHTML</span> é responsável por alterar o conteúdo dos elementos. Nesse caso, ele altera o conteúdo dos parágrafos que possuem o <span>id="outTitulo"</span> e <span>id="outResposta"</span>.</p><br>
+        <p>Por fim temos o funcionamento do botão. Essa função <span>converterDuracao( )</span> só irá funcionar após o botão ser clicado. Primeiramente devemos criar a ligação/referência com o <span>input</span> <span>button</span> que se encontra dentro do arquivo em html. Tal referencia é feita através do <span>id="btConverter"</span>. Em seguida temos a criaçao do "escutador de evento" que informa que, através de um click no botão a função <span>converterDuracao</span> é acionada.</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_a3.png" alt="Imagem"></p><br>
+        <p><b>b )</b> Aqui a entrada de dados será nos input's text. O processamento de dados será no input button. E a saída de dados nos três parágrafos finais (id="outVeiculo", id="outEntrada" e id="outParcela").</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_b2.png" alt="Imagem"></p><br>
+        <p>Primeiramente é feito a referência (ligação) com os elementos em html através do comando document.getElementById. Tais referências só são possíveis devido ao id em cada elemento. Cada referência é armazenada em uma variável que possui o mesmo nome que o id.</p><br>
+        <p>Em seguida o comando value é usado para capturar o conteúdo digitado. Em inPreco.value temos que converter a string em número com o uso do Number( ). Em seguida, os valores capturados sao armazenados em variáveis (veiculo e preco).</p><br>
+        <p>Para pegarmos o valor da entrada do veículo de 50%, dividimos o preco por 2.</p><br>
+        <p>Como o valor restante também é 50%, podemos pegar a entrada e dividir por 12 para pegarmos o valor das parcelas.</p><br>
+        <p>O comando innerHTML altera o conteudo do elemento. No caso do comando outVeiculo.innerHTML, o conteúdo ("Promoção: " + veiculo) será colocado dentro do elemento p.</p><br>
+        <p>Por fim temos o funcionamento do botão. Essa função mostrarPromocao( ) só irá funcionar após o botão ser clicado. Primeiramente devemos criar a ligação/referência com o input button que se encontra dentro do arquivo em html. Tal referencia é feita através do id="btVer". Em seguida temos a criaçao do "escutador de evento" que informa que, através de um click no botão a função mostrarPromocao é acionada.</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_b3.png" alt="Imagem"></p><br>
+        <p><b>c )</b> A entrada de dados será os input's text. O processamento de dados será no input button. E a saída de dados no h3 (id="outValor").</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_c2.png" alt="Imagem"></p><br>
+        <p>Para calcular o valor a ser pago, devemos pegar o preço de 1 kilo e dividir por 1000, logo em seguida multiplicar pelo consumo do cliente. O resultado é armazenado dentro da variável valor.</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_c3.png" alt="Imagem"></p><br>
+        <p><b>d )</b> A entrada de dados será os input's text, que estão dentro dos dois primeiros parágrafos (p). O processamento de dados será no input button. E a saída de dados nos dois h3.</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_d2.png" alt="Imagem"></p><br>
+        <p>O valor do desconto é calculado com a ajuda da função matemática Math.floor. O preco pode ter casas decimais, entao o Math.floor arredonda o numero pra baixo e pega o numero inteiro. Logo em seguida multiplica por 2 e armazena o valor dentro da variavel desconto.</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_d3.png" alt="Imagem"></p><br>
+        <p><b>e )</b> A entrada de dados será os input's text, que estão dentro dos dois primeiros parágrafos (p). O processamento de dados será no input button. E a saída de dados no h3.</p><br>
+        <p><img src="img/cap03/exercicios/exercicio_e2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap03/exercicios/exercicio_e3.png" alt="Imagem"></p><br>
+        <p><b>f )</b></p><br>
+        <p><img src="img/cap03/exercicios/exercicio_f2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap03/exercicios/exercicio_f3.png" alt="Imagem"></p><br><br>
+        <div id="voltar-topo">
+            <a href="#div">Voltar p/ o Topo</a>
+        </div><br><br>
+    </div>
+</body>
+</html>

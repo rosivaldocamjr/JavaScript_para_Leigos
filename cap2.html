@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap 2 - Html e Css Básico</title>
+    <link rel="stylesheet" href="css/paginaInicial.css">
+</head>
+<body>
+    <div id="div">
+        <div id="voltar-pag-inicial">
+            <a href="index.html">Voltar p/ Página Inicial</a>
+        </div>
+        <h2>Html e Css Básico</h2>
+        <p>Para criar uma página web geralmente usamos o Html, o Css e o JavaScript, todos juntos e integrados. Nesse capítulo estudaremos o básico do Html e do Css. Basicamente o Html é o conteúdo apresentado no site, como títulos, parágrafos, imagens, etc. O Css é responsável pelo design do site, como cores de texto e fundo, tamanho de fontes, espaçamento entre parágrafos, etc.</p><br><br>
+        <h3>Como funciona o HTML</h3><br>
+        <p>O Html funciona através de um documento HTML, ou seja, um documento com a extensão <span>.html</span>, o navegador faz a leitura do arquivo e renderiza o seu conteúdo para que o usuário final possa visualizá-lo. Os arquivos <span>.html</span> podem ser visualizados em qualquer navegador (como Google Chrome, Safari, ou Mozilla Firefox).</p><br>
+        <p>Geralmente um site é composto por diversas páginas HTML, como por exemplo: um website que contenha três páginas (uma homepage, uma página de contato e uma página de produtos) receberá ao menos três documentos <span>.html</span> distintos, sendo uma para cada página do website.</p><br>
+        <p>O Html trabalha com tags (também chamados de elementos) que podem ser considerados os blocos de construção das páginas. Alguns exemplos de tags:</p><br>
+        <p><img src="img/cap02/exemplos_tags.png" alt="Imagem"></p><br>
+        <p>A maioria das tags são compostas por uma estrutura de abertura e uma de fechamento:</p><br>
+        <p><img src="img/cap02/abertura_fechamento_tags.png" alt="Imagem"></p><br>
+        <p>Há também tags de estrutura única, como a  tag <span>br</span> que realiza uma quebra de linha.</p><br>
+        <p><img src="img/cap02/tag_unica.png" alt="Imagem"></p><br>
+        <p>Digamos que você queria escrever um paragrafo, chamamos então a tag <span>p</span>, escrevemos o paragrafo e finalmente fechamos a tag:</p><br>
+        <p><img src="img/cap02/tag_p.png" alt="Imagem"></p><br><br>
+        <h3>Principais tags (Existem mais de 140 tags em Html)</h3><br>
+        <p><img src="img/cap02/principais_tags_html.png" alt="Imagem"></p><br><br>
+        <h3>A estrutura básica de um documento HTML</h3><br>
+        <p><img src="img/cap02/estrutura_basica_html.png" alt="Imagem"></p><br>
+        <p>O <span>DOCTYPE Html</span> é uma declaração para informar ao navegador qual é a versão do HTML utilizada no arquivo. Essa declaração vem antes das tags HTML, portanto, geralmente é apresentada na primeira linha de um código.</p><br>
+        <p>O atributo <span>lang</span> ajuda a definir o idioma de um elemento, a língua em que elementos devem ser escritos pelo usuário.</p><br>
+        <p>O elemento <span>head</span> recebe todas as informações básicas da página, como o título, links de elementos externos, metadados, etc.</p><br>
+        <p>Para que não ocorram erros de renderização ou incompatibilidade de caracteres, devemos também declarar o padrão de teclado. No Brasil e em boa parte da América Latina, utilizamos o padrão <span>UTF-8</span>. Dessa forma, através da tag de metadados <span>meta</span>, vamos declarar dentro de um atributo <span>charset</span> que nosso padrão é o <span>UTF-8</span>.</p><br>
+        <p>As duas próximas tags que estão dentro do <span>meta</span> não são importantes para esse momento. Só devem ser escritas.</p><br>
+        <p><img src="img/cap02/meta_html.png" alt="Imagem"></p><br>
+        <p>A tag <span>title</span> é onde você irá colocar o título do site e se localizará no topo do navegador.</p><br>
+        <p><img src="img/cap02/titulo_site.png" alt="Imagem"></p><br>
+        <p>Entre a tag <span>body</span> é onde ficará o corpo do site, é a parte que será visível no navegador.</p><br>
+        <p>No editor de código Visual Studio Code, temos um comando que nos trás a estrutura do HTML pronto para usar, sem precisarmos escrever linha por linha. Digite um ponto de exclamação e espere aparecer a seguinte tela:</p><br>
+        <p><img src="img/cap02/emmet_exclamacao.png" width="700px" alt="Imagem"></p><br>
+        <p>Em seguida aperte enter, então a estrutura HTML irá aparecer sem precisarmos digitar.</p><br>
+        <p>Agora faremos o nosso primeiro site.</p><br>
+        <p><img src="img/cap02/meu_primeiro_site.png" alt="Imagem"></p><br>
+        <p>Note que houve uma mudança em <span>lang</span>.</p>
+        <p><span>pt-br</span>, significa que a linguagem dos elementos agora é em português.</p>
+        <p>Dentro do título <span>title</span> digitamos "Meu Primeiro Site".</p>
+        <p>Dentro do <span>body</span> temos um <span>h1 (título)</span> e 3 parágrafos.</p><br>
+        <p>Ao abrir o arquivo html através do navegador, o site ficará assim:</p><br>
+        <p><img src="img/cap02/meu_primeiro_site2.png" alt="Imagem"></p><br><br>
+        <h3>Css Básico</h3><br>
+        <p>O seletor aponta para o elemento HTML que você deseja estilizar. O bloco de declaração fica entre as chaves { }. As declaraçções ficam dentro do bloco e são separadas por ponto e vírgula.</p><br>
+        <p>Cada declaração inclui um nome de propriedade CSS e um valor, separados por dois pontos.</p><br>
+        <p>No exemplo abaixo, o seletor é o <span>body</span> e a declaração <span>background-color</span> serve para mudar a cor de fundo do seletor. O valor <span>aqua</span> é o nome da cor.</p><br>
+        <p><img src="img/cap02/declaracao_css.png" alt="Imagem"></p><br>
+        <p>Existem três maneiras que você pode usar para implementar o CSS: interno, externo e inline.</p><br>
+        <p>O CSS interno ou incorporado requer que você adicione a tag <span>style</span> na seção <span>head</span> do seu documento HTML.</p><br>
+        <p><img src="img/cap02/css_basico1.png" alt="Imagem"></p><br>
+        <p>Ao abrir o arquivo no navegador:</p><br>
+        <p><img src="img/cap02/css_basico2.png" alt="Imagem"></p><br>
+        <p>Css Inline - para este estilo de CSS você somente vai precisar adicionar o atributo <span>style</span> para cada tag HTML, sem usar os seletores. Este tipo de CSS não é recomendado.</p><br>
+        <p><img src="img/cap02/css_basico3.png" alt="Imagem"></p><br>
+        <p>Ao abrir o arquivo no navegador:</p><br>
+        <p><img src="img/cap02/css_basico4.png" alt="Imagem"></p><br>
+        <p>Com o CSS externo, você vai linkar a página Html com um arquivo <span>.css</span> externo. Este tipo de CSS é o método mais eficiente, especialmente se você está estilizando um site grande. Ao editar um arquivo <span>.css</span>, você pode modificar um site inteiro de uma só vez.</p><br>
+        <p>Primeiramente devemos criar o arquivo <span>.css</span>, nesse caso criaremos o arquivo <span>style.css</span>.</p><br>
+        <p><img src="img/cap02/criando_arquivo_css.png" alt="Imagem"></p><br>
+        <p>O segundo passo é incluir o comando de criação dentro da tag <span>head</span>. O Visual Studio Code nos ajuda com essa criação apenas digitando a palavra <span>link</span> e clicando em <span>link:css</span>.</p><br>
+        <p><img src="img/cap02/link_css.png" alt="Imagem"></p><br>
+        <p>O comando aparecerá dessa forma:</p><br>
+        <p><img src="img/cap02/link_css2.png" alt="Imagem"></p><br>
+        <p><span>href</span> é o local onde o arquivo css se encontra. Como o arquivo <span>style.css</span> se encontra na mesma pasta em que o arquivo <span>index.html</span>, basta escrever da forma que está na imagem.</p><br>
+        <p>Agora com tudo configurado, podemos iniciar as declarações dentro do arquivo <span>style.css</span>.</p><br>
+        <p><img src="img/cap02/declarando_estilos_css.png" alt="Imagem"></p><br>
+        <p>Iremos mexer em 3 seletores, o <span>body</span>, <span>h1</span> e o <span>p</span>.</p><br>
+        <p>O <span>body</span> é corpo da página, é a parte visível do site. Nele declaramos a cor de fundo <span>(background-color)</span> como <span>aqua</span>.</p><br>
+        <p>O <span>h1</span> é o título da página, nele declaramos que a cor da fonte é vermelha.</p><br>    
+        <p>O <span>p</span> é o parágrafo, nele declaramos que a cor da fonte é blueviolet.</p><br>
+        <p><img src="img/cap02/css_navegador.png" alt="Imagem"></p><br><br>
+        <h3>Alguns Comandos em Css</h3><br>
+        <p>color ➜ edita a cor da fonte.</p>
+        <p>background-color ➜ edita a cor do fundo.</p>
+        <p>width ➜ edita a largura do elemento.</p>
+        <p>height ➜ edita a altura do elemento.</p>
+        <p>font-family ➜ edita o tipo da fonte. Ex: Arial, Times New Roman, Georgia, Impact.</p>
+        <p>font-size ➜ edita o tamanho da fonte.</p>
+        <p>font-weight ➜ especifica o peso ou a intensidade da fonte (ex.: negrito).</p>
+        <p>border ➜ é utilizada para adicionar um contorno ao elemento.</p><br><br>
+        <h3>Class e Id</h3><br>
+        <p>Até agora aplicamos os estilos somente nos seletores <span>body</span>, <span>h1</span> e <span>p</span>. Mas há outros tipos de seletores que são muito utilizados em Html e Css, são as <span>classes</span> e <span>id's</span>.</p><br>
+        <p>As classes são uma forma de identificar um grupo de elementos. Através delas, pode-se atribuir formatação a VÁRIOS elementos de uma vez. O atributo <span>class="paragrafo"</span> é escrito dentro da tag de abertura, no exemplo abaixo foi escrito dentro da tag de abertura <span>p</span>.</p><br>
+        <p><img src="img/cap02/class_html1.png" alt="Imagem"></p><br>
+        <p>No arquivo <span>style.css</span>, temos o seletor <span>.paragrafos</span> que faz referência aos parágrafos que receberam <span>class="paragrafos"</span> no arquivo Html.</p><br>
+        <p>O ponto <span>(.)</span> antes do paragrafo (dentro do arquivo css) informa que é uma classe. Logo, todos os elementos receberão a configuração <span>color: green;</span>.</p><br>
+        <p><img src="img/cap02/class_css1.png" alt="Imagem"></p><br>
+        <p>Aqui temos todos os parágrafos na cor verde.</p><br>
+        <p><img src="img/cap02/class_navegador1.png" alt="Imagem"></p><br>
+        <p>Já os <span>id's</span>, identificam apenas um único elemento.</p><br>
+        <p><img src="img/cap02/id_html.png" alt="Imagem"></p><br>
+        <p>No arquivo <span>style.css</span>, temos o seletor <span>#titulo</span> que faz referência ao título que recebeu <span>id="titulo"</span> no arquivo Html.</p><br>
+        <p>O hash ou jogo da velha <span>(#)</span> antes do titulo (dentro do arquivo css) informa que é um <span>id</span>. Logo, o elemento <span>h1</span> receberá a configuração de <span>color: red;</span> e <span>font-size: 60px;</span></p><br>
+        <p><img src="img/cap02/id_css.png" alt="Imagem"></p><br>
+        <p>Aqui temos o resultado ao abrir o arquivo index.html pelo navegador.</p><br>
+        <p><img src="img/cap02/id_navegador.png" alt="Imagem"></p><br><br>
+        <h3>Exercícios</h3><br>
+        <p><b>a )</b> Escreva uma lista de 5 coisas que você goste de fazer. O título (h1) deverá ser "O que eu gosto de fazer". O site no navegador deverá ser da seguinte forma:</p><br>
+        <p><img src="img/cap02/exercicios/exercicio_a1.png" alt="Imagem"></p><br>
+        <p><b>b )</b> Escreva uma lista com o nome de 3 planetas. O título (h1) deverá ser "Escreva o nome de 3 planetas". Os 3 parágrafos (p) devem conter a classe class="planetas" e serem estilizadas através do seletor .planetas. O site no navegador deverá ser da seguinte forma:</p><br>
+        <p><img src="img/cap02/exercicios/exercicio_b1.png" alt="Imagem"></p><br>
+        <p><b>c )</b> Escreva uma lista com o nome de 3 frutas. O título (h1) deverá ser "Escreva o nome de 3 frutas". Cada elemento (h1 e p) deverá conter um id diferente. O site no navegador deverá ser da seguinte forma:</p><br>
+        <p><img src="img/cap02/exercicios/exercicio_c1.png" alt="Imagem"></p><br><br>
+        <h3>Resolução dos Exercícios</h3><br>
+        <p><b>a )</b></p><br>
+        <p><img src="img/cap02/exercicios/exercicio_a2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap02/exercicios/exercicio_a3.png" alt="Imagem"></p><br>
+        <p><b>b )</b></p><br>
+        <p><img src="img/cap02/exercicios/exercicio_b2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap02/exercicios/exercicio_b3.png" alt="Imagem"></p><br>
+        <p><b>c )</b></p><br>
+        <p><img src="img/cap02/exercicios/exercicio_c2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap02/exercicios/exercicio_c3.png" alt="Imagem"></p><br><br>
+        <div id="voltar-topo">
+            <a href="#div">Voltar p/ o Topo</a>
+        </div><br><br>
+    </div>
+</body>
+</html>

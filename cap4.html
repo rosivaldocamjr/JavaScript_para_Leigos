@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap 4 - Conceitos Importantes</title>
+    <link rel="stylesheet" href="css/paginaInicial.css">
+</head>
+<body>
+    <div id="div">
+        <div id="voltar-pag-inicial">
+            <a href="index.html">Voltar p/ Página Inicial</a>
+        </div>
+        <h2>Conceitos Importantes</h2>
+        <p>Aqui neste capítulo veremos alguns conceitos de extrema importância em JavaScript.</p><br><br>
+        <h3>Como usar aspas simples e duplas (' ') (" ")</h3><br>
+        <p>A verdade é que para o JavaScript não faz diferença se você declara uma String com aspas simples ou duplas, para ele as duas maneiras são declarações válidas para uma String. A grande competição por escolher um ou outro é puramente por gosto particular de cada desenvolvedor, muitos preferem simples, porém, outros preferem duplas.</p><br>
+        <p>Imagine que você precise escrever a seguinte String:</p><br>
+        <p>➜ It's a new game</p><br>
+        <p>Ou:</p><br>
+        <p>➜ I'm a Front-End developer</p><br>
+        <p>Para resolver esse problema deve-se utilizar as aspas duplas:</p><br>
+        <p>➜ " It's a new game "</p><br>
+        <p>➜ " I'm a Front-End developer "</p><br>
+        <p>Mas, e se você precisar destacar alguma palavra com aspas duplas ?</p><br>
+        <p>➜ TypeScript é uma “linguagem” de programação</p><br>
+        <p>Para escrever essa frase com aspas duplas, devemos utilizar as aspas simples.</p><br>
+        <p>➜ ' TypeScript é uma "linguagem" de programação '</p><br><br>
+        <h3>Template Strings `${var} blablabla`</h3><br>
+        <p>É uma nova forma de criar strings e tornar o seu código um pouco mais legível.</p><br>
+        <p>Até agora usamos as aspas (simples ou duplas) e o sinal de adição (concatenação) para escrever as saidas de dados.</p><br>
+        <p>➜ "Eu tenho: " + anos + " anos"</p><br>
+        <p>Na saida de dados fica assim:</p><br>
+        <p>➜ Eu tenho 18 anos</p><br>
+        <p>Template strings são envolvidas pelo acento crase (` `) em vez de aspas simples ou duplas. Template strings podem possuir placeholders. Estes são indicados por um cifrão seguido de chaves. O mesmo código escrito acima, é escrito da seguinte forma:</p><br>
+        <p>➜ `Eu tenho: ${anos} anos`</p><br>
+        <p>➜ `Meu nome é ${nome}`</p><br>
+        <p>A variável fica dentro das chaves. Dentro das chaves também podem ter expressoes.</p><br>
+        <p>➜ `Um mais um é igual a ${1+1}`</p><br><br>
+        <h3>Escopo de Variável</h3><br>
+        <p>Quando você declara uma váriavel fora de qualquer função, ela é chamada de <span>variável</span> <span>global</span>, porque está disponível para qualquer outro código no documento atual. Quando você declara uma variável dentro de uma função, é chamada de <span>variável</span> <span>local</span>,  pois ela está disponível somente dentro dessa função.</p><br>
+        <p>Basicamente escopo é o limite de alcance que uma determinada variável tem. Se criar uma variável dentro de uma função, esta variável só poderá ser utilizada por esta função.</p><br><br>
+        <h3>Diferença entre let, var e const</h3><br>
+        <p>Var e Let são muito parecidos, eles sao variáveis. O var é uma variável global, ele funciona em qualquer lugar do programa. O let só funciona dentro do bloco que foi declarado.</p><br>
+        <p>Atualmente surgiu um recurso chamado let, que pode ser usado para a declaração de variáveis.</p><br>
+        <p>Let é, agora, a forma preferida de declaração de variáveis. Não é uma surpresa, já que ela é uma melhoria às declarações com var.</p><br>
+        <p>Um bloco é uma porção de código cercado por {}. Um bloco vive dentro dessas chaves. Tudo o que estiver cercado por chaves é um bloco.</p><br>
+        <p>Assim, uma variável declarada com let em um bloco estará disponível apenas dentro daquele bloco.</p><br>
+        <p>Veja o vídeo explicativo:</p>
+        <p><a href="https://www.youtube.com/watch?v=ZOx7iTnBqFQ&ab_channel=ProgramadorBR" target="_blank">https://www.youtube.com/watch?v=ZOx7iTnBqFQ&ab_channel=ProgramadorBR</a></p><br><br>
+        <h3>O que significa objetos, métodos e propriedades</h3><br>
+        <p>Não entraremos a fundo no estudo dos objetos, apenas veremos o básico para termos uma pequena noção.</p><br>
+        <p>Um objeto é uma coleção de dados e/ou funcionalidades relacionadas, que geralmente consistem em diversas variáveis e funções.</p><br>
+        <p><img src="img/cap04/objeto_simples.png" alt="Imagem"></p><br>
+        <p>Objetos em JavaScript, assim como em muitas outras linguagens de programação, podem ser comparados com objetos na vida real. O conceito de objetos em JavaScript pode ser entendido como objetos tangíveis da vida real.</p><br>
+        <p>Em JavaScript, um objeto é uma entidade independente, com propriedades e tipos. Compare-o com uma xícara, por exemplo. Uma xícara é um objeto com propriedades. Uma xícara tem uma cor, uma forma, peso, um material de composição, etc. Da mesma forma, objetos em JavaScript podem ter propriedades, que definem suas características.</p><br><br>
+        <h3>O que significa e como usar o console.log</h3><br>
+        <p>O console é um objeto e o log é um método.</p><br>
+        <p>O console é efetivamente um objeto com diversos métodos associados.</p><br>
+        <p>O objeto console fornece acesso ao console de depuração do navegador. O funcionamento deste objeto varia de navegador para navegador mas existem determinados métodos que são vistos como padrão. Um desses métodos é o log( ).</p><br>
+        <p>O método log() existe essencialmente para permitir o envio de dados para o console de depuração do navegador.</p><br>
+        <p>Criaremos um exemplo simples para aprendermos a usar o console.log.</p><br>
+        <p><img src="img/cap04/console_log_1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap04/console_log_2.png" alt="Imagem"></p><br>
+        <p>Ao abrirmos o arquivo html no navegador:</p><br>
+        <p><img src="img/cap04/console_log_3.png" alt="Imagem"></p><br>
+        <p>Clique com o botao direito do mouse e clique em inspecionar.</p><br>
+        <p><img src="img/cap04/console_log_4.png" alt="Imagem"></p><br>
+        <p>Será aberto a seguinte janela, clique em "console".</p><br>
+        <p><img src="img/cap04/console_log_5.png" alt="Imagem"></p><br>
+        <p>Veja o vídeo explicativo:</p>
+        <p><a href="https://www.youtube.com/watch?v=nQ1XX0GrBEs&ab_channel=NodeStudioTreinamentos" target="_blank">https://www.youtube.com/watch?v=nQ1XX0GrBEs&ab_channel=NodeStudioTreinamentos</a></p><br><br>
+        <div id="voltar-topo">
+            <a href="#div">Voltar p/ o Topo</a>
+        </div><br><br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap 5 - Condições</title>
+    <link rel="stylesheet" href="css/paginaInicial.css">
+</head>
+<body>
+    <div id="div">
+        <div id="voltar-pag-inicial">
+            <a href="index.html">Voltar p/ Página Inicial</a>
+        </div>
+        <h2>Condições</h2>
+        <p>As estruturas condicionais estão ligadas à tomada de decisão de um algoritmo. Por exemplo, se um aluno tiver a média de notas inferior a 7, o algoritmo irá mostrar "reprovado". Se a média de notas for superior ou igual a 7, o algoritmo mostrará "aprovado".</p><br>
+        <p>Essas estruturas condicionais podem ser inseridas dentro da entrada de dados, do processamento de dados ou dentro da saída de dados.</p><br>
+        <p>Em um programa que calcula a média das notas dos alunos e exibe se o aluno foi aprovado ou reprovado, as etapas de entrada de dados e processamento de dados serão as mesmas. A estrutura condicional será utilizada apenas na saída de dados, para mostrar a mensagem "Aprovado" ou "Reprovado".</p><br>
+        <p>Já em um programa que calcula o peso ideal (cálculo diferente para cada sexo), as etapas de entrada de dados e saída serão as mesmas. A estrutura condicional será dentro do processamento de dados (cálculo).</p><br>
+        <p>Para entrarmos nesse assunto, primeiramente devemos ver dois conceitos de extrema importância, os operadores relacionais e os operadores lógicos.</p><br><br>
+        <h3>Operadores Relacionais</h3><br>
+        <p> Veremos agora alguns operadores relacionais, que quando inseridos em um programa, cada comparação deve retornar <span>true</span> (verdadeiro) ou <span>false</span> (falso).</p><br>
+        <p><span>== Igual</span>. Retorna verdadeiro caso os dados comparados contenham o mesmo conteúdo.</p><br>
+        <p><span>!= Diferente</span>. Retorna verdadeiro caso os dados contenham conteúdos diferentes.</p><br>
+        <p><span>> Maior</span>. Usado para comparar números ou palavras.</p><br>
+        <p><span>< Menor</span>. Usado para comparar números ou palavras.</p><br>
+        <p><span>>= Maior ou Igual</span>.</p><br>
+        <p><span><= Menor ou Igual</span>.</p><br>
+        <p>Existem também os símbolos de <span>=== (estritamente igual)</span> e <span>!== (estritamente</span> <span>diferente)</span>. Eles comparam o valor e também o tipo do dado, se é número ou string.</p><br>
+        <p>'5' === 5, retorna falso</p><br>
+        <p>'5' !== 5, retorna verdadeiro</p><br><br>
+        <h3>Operadores Lógicos</h3><br>
+        <p>Há situações em que devemos analisar mais de uma condição. Por exemplo, um cliente quer um carro azul ou cinza. Ou, um cliente quer um carro inferior a R$ 15.000,00 e o ano acima de 2010.</p><br>
+        <p>Os principais operadores lógicos em JavaScript:</p><br>
+        <p><span>Not ( ! )</span>. Indica negação. Inverte o resultado de uma comparação.</p><br>
+        <p><span>And ( && )</span>. Indica conjunção. Retorna verdadeiro (<span>true</span>) apenas quando todas as comparações forem verdadeiras.</p><br>
+        <p><span>Or ( || )</span>. Indica disjunção. Retorna verdadeiro se, no mínimo, uma das condições for verdadeira.</p><br>
+        <p>Em operadores lógicos usamos uma tabela com todas as possíveis comparações, chamada tabela verdade.</p><br>
+        <p>Veremos um exemplo agora de como utilizar a tabela verdade com duas variáveis. Na tabela verdade utilizamos uma letra <span>(p ou q)</span> para representar uma proposição.</p><br>
+        <p>var cor = "Azul" ➜ <span>P</span></p><br>
+        <p>var ano = 2017 ➜ <span>Q</span></p><br>
+        <p>A tabela a seguir é a de negação <span>( ! )</span>. Ela pode ser aplicada a apenas uma proposição.</p><br>
+        <p><img src="img/cap05/tabela_verdade_negacao.png" alt="Imagem"></p><br>
+        <p>A negação é o mais simples dos operadores. Ela inverte o resultado de uma condição.</p><br>
+        <p>A tabela a seguir é a de conjunção <span>( && )</span>. Ela reflete a ideia de simultaneidade.</p><br>
+        <p><img src="img/cap05/tabela_verdade_conjuncao.png" alt="Imagem"></p><br>
+        <p>Só retorna verdadeiro se todas as comparações forem verdadeiras.</p><br>
+        <p>Ex: 1 < 4 && 4 > 2, essa expressão retorna <span>true</span>, pois as duas proposições são <span>true</span>.</p><br>
+        <p>A tabela a seguir é a de disjunção <span>( || )</span>. Ela reflete a ideia de que pelo menos uma das condições deve ser verdadeira.</p><br>
+        <p><img src="img/cap05/tabela_verdade_disjuncao.png" alt="Imagem"></p><br>
+        <p>Ex: 3 > 5 || 1 < 4, essa expressão retorna <span>true</span>, pois a segunda proposição é <span>true</span>.</p><br><br>
+        <h3>If ... else</h3><br>
+        <p>Para criarmos uma estrutura condicional, utilizamos os comandos <span>if ... else</span> (se ... então). Eles possuem algumas variações. É possível utilizarmos apenas o if sem o else. E também criarmos vários comandos else.</p><br>
+        <p>Uma condição simples sem o else:</p><br>
+        <pre>
+            if (condição) {
+                comandos para true;
+            }
+        </pre>
+        <p>Condição if ... else:</p><br>
+        <pre>
+            if (condição) {
+                comandos para true;
+            } else {
+                comandos para false;
+            }
+        </pre>
+        <p>Múltiplas condições:</p><br>
+        <pre>
+            if (condição) {
+                comandos 1;
+            } else if (condição) {
+                comandos 2;
+            } else {
+                comandos 3;
+            }
+        </pre>
+        <p><span>IMPORTANTE</span>: Quando houver apenas uma linha de comando que pertence à condição, o uso das chaves não é obrigatório.</p><br>
+        <pre>
+            if (condição) comando;
+        </pre><br>
+        <h3>Switch ... Case</h3><br>
+        <p>Switch case é um outro tipo de estrutura condicional. Ele é útil quando tivermos várias alternativas a partir de uma variável.</p><br>
+        <p>No exemplo abaixo o programa é feito dentro do arquivo <span>index.html</span>. Note que o programa todo está entre a tag <span>script</span>.</p><br>
+        <p>Primeiramente temos uma entrada de dados <span>(prompt)</span>, onde o valor digitado é convertido para número através do comando <span>Number( )</span>, e em seguida armazenado na variável numero. Na próxima linha temos a declaração da variável resultado, mas nenhum valor valor é atribuido.</p><br>
+        <p>A estrutura switch escolhe a condição a ser executada a partir da variável numero. Se o número digitado na entrada de dados (prompt) for 1, os comandos de dentro do <span>case 1</span> serão executados. O <span>break</span> significa que a estrutura <span>switch</span> encerrou e o próximo comando a ser lido será o <span>alert</span> (saída de dados). Só entrará no <span>default</span> caso nenhuma das  condições anteriores forem executadas.</p><br>
+        <p>Na saída de dados alert, temos o uso do formato <span>template strings</span>, que utiliza o <span>sinal de crase (` `)</span>, o <span>cifrão ($)</span> e as <span>chaves { }</span>, para mostrar a saída de dados.</p><br>
+        <p><img src="img/cap05/switch_case1.png" alt="Imagem"></p><br>
+        <p>Ao abrir o programa <span>index.html</span> através do navegador, temos a seguinte imagem:</p><br>
+        <p><img src="img/cap05/switch_case2.png" alt="Imagem"></p><br>
+        <p>Ao digitar um número e clicar em OK, a saída de dados será dessa forma:</p><br>
+        <p><img src="img/cap05/switch_case3.png" alt="Imagem"></p><br><br>
+        <h3>Operador Ternário</h3><br>
+        <p>Existe ainda uma forma abreviada para criar as instruções if ... else conhecida como operador ternário.</p><br>
+        <p><img src="img/cap05/operador_ternario.png" alt="Imagem"></p><br><br>
+        <h3>Exercícios</h3><br>
+        <p><b>a )</b> Elabore um programa que leia o nome e as notas de um aluno, apresente a média e uma mensagem para o aluno, caso aprovado "Parabéns Aluno! Você foi aprovado(a)", e caso reprovado "Que Pena Aluno. Você foi reprovado(a)". A mensagem de aprovação deverá ser azul e a de reprovação vermelha.</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_a1.png" alt="Imagem"></p><br>
+        <p><b>b )</b> Elabore um programa que calcule o peso idel de uma pessoa. Para homem o cálculo será ( 22 * altura² ), se for mulher será ( 21 * altura² ).</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_b1.png" alt="Imagem"></p><br>
+        <p><b>c )</b> Elabore um programa que leia a hora no Brasil e informe a hora na França. Sabendo que na França é 5 horas a mais que no Brasil.</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_c1.png" alt="Imagem"></p><br>
+        <p><b>d )</b> Elabore um programa que leia um número e calcule sua raiz quadrada. Caso a raiz não seja exata, informe "Não há raiz exata para ...".</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_d1.png" alt="Imagem"></p><br>
+        <p><b>e )</b> Elabore um programa que leia um número e informe se ele é ímpar ou par.</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_e1.png" alt="Imagem"></p><br>
+        <p><b>f )</b> Elabore um programa que leia a velocidade permitida em uma estrada e a velocidade de um condutor. Se a velocidade for inferior ou igual a permitida, exiba "Sem multa". Se a velocidade for de até 20% maior que a permitida, exiba "Multa leve". Se a velocidade for superior a 20% da velocidade permitida, exiba "Multa drive".</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_f1.png" alt="Imagem"></p><br>
+        <p><b>g )</b> Elabore um programa que simule um parquímetro, o qual leia o valor de moedas depositado. O programa deve informar o tempo de permanência do veículo no local e o troco (se existir). Se for inferior ao tempo mínimo, exiba a mensagem "Valor Insuficiente.". Considere os valores e o tempo da tabela a seguir.</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_g1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_g2.png" alt="Imagem"></p><br>
+        <p><b>h )</b> Elabore um programa que leia três lados e verifique se eles podem ou não formar um triângulo. Para formar, um dos lados não pode ser maior que a soma dos outros dois. Caso formem um triângulo, exiba qual o tipo: Equilátero (3 lados iguais), Isósceles (2 lados iguais) e Escaleno (3 lados diferentes).</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_h1.png" alt="Imagem"></p><br>
+        <p><b>i )</b> Elabore um programa que leia dois números e verifique quem é o maior.</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_i1.png" alt="Imagem"></p><br>
+        <p><b>j )</b> Elabore um programa que leia dois números e calcule a operação escolhida.</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_j1.png" alt="Imagem"></p><br><br>
+        <h3>Resolução dos Exercícios</h3><br>
+        <p><b>a )</b></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_a2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_a3.png" alt="Imagem"></p><br>
+        <p><b>b )</b></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_b2.png" alt="Imagem"></p><br>
+        <p>Para pegarmos a opção que foi clicada nos input's radio, utilizamos o comando checked. A variável masculino irá guardar true ou false, da mesma forma que a variável feminino. Na estrutura <span>if...else</span>, se masculino for true, o comando <span>peso = 22 * Math.pow(altura, 2)</span> será executado. A função matemática <span>Math.pow</span> significa exponenciação (altura elevado a 2).</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_b3.png" alt="Imagem"></p><br>
+        <p><b>c )</b></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_c2.png" alt="Imagem"></p><br>
+        <p>A variável <span>horaFranca</span> recebe a hora digitada mais 5. Mas, e se a hora digitada for 21 ? Para isso temos a estrutura condicional seguinte. Caso o valor da variável <span>horaFranca</span> seja 26, esse valor será subtraido por 24.</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_c3.png" alt="Imagem"></p><br>
+        <p><b>d )</b></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_d2.png" alt="Imagem"></p><br>
+        <p>A variável raiz contém a função matemática <span>Math.sqrt()</span>, que calcula a raiz quadrada de um número. Nesse caso, está sendo calculado a raiz da variável numero.</p><br>
+        <p>No início da estrutura condicional, temos uma condição, <span>se raiz for igual a Math.floor(raiz)</span>. Se resultar em true, o primeiro comando entre chaves { } será executado.</p><br>
+        <p>O comando <span>Math.floor(raiz)</span>, significa que se a raiz for um número com casas decimais após a vírgula, desse número será usado apenas o número inteiro.</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_d3.png" alt="Imagem"></p><br>
+        <p><b>e )</b></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_e2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_e3.png" alt="Imagem"></p><br>
+        <p><b>f )</b></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_f2.png" alt="Imagem"></p><br>
+        <p>Como o valor de 20% é citado duas vezes no enunciado da questão, é criado a variável <span>vintePorcento</span>. Entre parênteses a variável <span>velocidadePermitida</span> é multiplicada por 20%. Logo depois, é somada com ela mesma.</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_f3.png" alt="Imagem"></p><br>
+        <p><b>g )</b></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_g3.png" alt="Imagem"></p><br>
+        <p>O primeiro <span>if</span> é para evitar que valores menores que 1 sejam digitados. Se o valor for menor que 1, o comando <span>alert</span> é executado com a mensagem <span>Valor Insuficiente</span>. <span>inValor.focus()</span> significa que o cursor ficará piscando na caixa <span>inValor</span>.</p><br>
+        <p><span>let troco, tempo</span> é outra forma de declarar variáveis. É o mesmo que declarar primeiro a variável <span>troco</span> e depois a variável <span>tempo</span>.</p><br>
+        <p><img src="img/cap05/exercicios/exercicio_g4.png" alt="Imagem"></p><br>
+        <p><b>h )</b></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_h2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_h3.png" alt="Imagem"></p><br>
+        <p><b>i )</b></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_i2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_i3.png" alt="Imagem"></p><br>
+        <p><b>j )</b></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_j2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap05/exercicios/exercicio_j3.png" alt="Imagem"></p><br><br>
+        <div id="voltar-topo">
+            <a href="#div">Voltar p/ o Topo</a>
+        </div><br><br>
+    </div>
+</body>
+</html>

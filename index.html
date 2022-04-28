@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/paginaInicial.css">
+    <title>JavaScript para Burros</title>
+</head>
+<body>
+    <header id="capa">
+        <h1>JavaScript para Burros</h1>
+        <p id="capa-ano">2022</p>
+        <img src="img/cap01/capa1.png" alt="Imagem">
+        <div id="capa-info">
+            <p id="capa-descricao">Essa documentação foi criada com o intuito de explicar a linguagem JavaScript da maneira mais simples possível e sem termos técnicos. Cada exercício será explicado passo a passo.</p>
+            <div id="capa-contatos">
+                <p>Autor: <b>Rosivaldo Campos</b></p>
+                <p>Github: <a href="https://github.com/rosivaldocamjr" target="_blank">https://github.com/rosivaldocamjr</a></p>
+                <p>Linkedin: <a href="https://www.linkedin.com/in/rosivaldocamposjr/" target="_blank">https://www.linkedin.com/in/rosivaldocamposjr/</a></p>
+            </div>
+        </div>
+    </header>
+    <section id="sumario">
+        <h2>Sumário</h2>
+        <h3>Módulo 1 - Iniciante</h3><br>
+        <ul>
+            <li><a href="#introducao">1 - Introdução</a></li>
+            <li><a href="cap2.html" target="_blank">2 - Html e Css Básico</a></li>
+            <li><a href="cap3.html" target="_blank">3 - JavaScript Básico</a></li>
+            <li><a href="cap4.html" target="_blank">4 - Conceitos Importantes</a></li>
+            <li><a href="cap5.html" target="_blank">5 - Condições</a></li>
+            <li><a href="cap6.html" target="_blank">6 - Repetições</a></li>
+        </ul><br><br>
+        <h3>Módulo 2 - Intermediário</h3><br>
+        <ul>
+            <li><a href="cap7.html" target="_blank">7 - Arrays</a></li>
+            <li><a href="cap8.html" target="_blank">8 - Strings e Datas</a></li>
+            <li><a href="cap9.html" target="_blank">9 - Funções e Eventos</a></li>
+        </ul>
+    </section>
+    <main id="introducao">
+            <h2>Introdução</h2>
+            <p>Para iniciarmos o estudo da <span>linguagem JavaScript</span>, primeiramente iremos conhecer alguns conceitos importantes, como <span>Lógica de Programação</span>, <span>Algoritmos</span>, <span>Entrada de Dados</span>, <span>Processamento de Dados</span>, <span>Saída de Dados</span>, <span>Editores de Códigos</span>, <span>Variáveis</span>, <span>Constantes</span>, <span>Comentários</span>, <span>Tipos de Dados</span>, <span>Operadores</span>, <span>Conversões de Dados</span> e também aprenderemos um pouco sobre a <span>origem</span> da <span>linguagem JavaScript</span>.</p><br><br>
+            <h3>Lógica de Programação e Algoritmos</h3><br>
+            <p>Lógica de programação é a organização de uma sequência de instruções voltadas à resolução de um problema. Ela é importante porque é quem nos dá as ferramentas para executar o processo de criação de um algoritmo. Em programação, algoritmos são um conjunto de instruções que um software ou aplicação deve seguir para executar uma tarefa, resolver um problema ou chegar a um objetivo distinto.</p><br>
+            <p>Algoritmos são sequências de passos que seguimos com a intenção de atingir um objetivo, pode ser desde atravessar uma rua, fazer um bolo ou definir qual critério usar para aprovar ou reprovar um aluno, por exemplo. Pense em um algoritmo como uma receita de bolo. Uma receita de bolo que nada mais é do que uma sequência lógica de etapas que, quando realizadas da maneira correta, resultam em uma deliciosa sobremesa.</p><br>
+            <p>Visualize a seguinte situação em que você precise fazer um bolo:</p><br>
+            <p>➜ Selecionar os ingredientes da receita</p>
+            <p>➜ Selecionar tigela</p>
+            <p>➜ Colocar farinha, de acordo com a medida</p>
+            <p>➜ Selecionar ovos</p>
+            <p>➜ Colocar manteiga e açúcar a gosto</p>
+            <p>➜ Colocar leite</p>
+            <p>➜ Misturar todos os ingredientes na tigela</p>
+            <p>➜ Despejar a massa na forma</p>
+            <p>➜ Levar ao forno</p>
+            <p>➜ Aguardar 40 minutos</p>
+            <p>➜ Retirar do forno</p>
+            <p>➜ Servir o bolo</p><br>
+            <p>Essa lógica é aplicada a qualquer coisa que fazemos diariamente e muitas das vezes não nos damos conta.</p><br>
+            <p>Veja esse exemplo de um algoritmo de cálculo da média, em que precisa-se analisar as notas de 3 bimestres para a disciplina de matemática e verificar se o aluno foi aprovado ou reprovado para uma média maior ou igual a 7:</p><br>
+            <p>➜ Obter a nota do 1º bimestre</p>
+            <p>➜ Obter a nota do 2º bimestre</p>
+            <p>➜ Obter a nota do 3º bimestre</p>
+            <p>➜ Realizar o cálculo da média para cada aluno (maior ou igual a 7 para aprovação)</p>
+            <p>➜ Informar se o aluno foi “aprovado ou reprovado”</p>
+            <p>➜ Informar a média obtida pelo aluno</p><br>
+            <p>Exemplo de um algoritmo para sair com o carro:</p><br>
+            <p>➜ Abrir a porta do carro</p>
+            <p>➜ Entrar no carro</p>
+            <p>➜ Ligar o carro</p>
+            <p>➜ Abrir o portão da garagem</p>
+            <p>➜ Engatar a marcha ré</p>
+            <p>➜ Sair com o carro da garagem</p>
+            <p>➜ Fechar o portão</p>
+            <p>➜ Engatar a primeira marcha</p>
+            <p>➜ Dirigir ao destino</p><br>
+            <p>Em linhas gerais, lógica de programação é todo conjunto de regras e conceitos que precisamos aplicar para criar códigos que serão interpretados e executados por um computador. Para conseguirmos instruir o computador a fazer alguma coisa, precisamos de uma linguagem de programação, que é um meio estruturado para passar instruções para a máquina. Estudar algoritmos e lógica de programação é o passo inicial para quem deseja entrar no mundo de desenvolvimento de software e começar a criar suas primeiras aplicações.</p><br><br>
+            <h3>Origem da linguagem JavaScript</h3><br>
+            <p>JavaScript foi criada pela Netscape Communications Corporation junto com a Sun Microsystems. Sua primeira versão foi lançada em 1995. Em 1996 a Netscape decidiu entregar o Javascript para a ECMA (que é uma associação dedicada à padronização de sistemas de informação). Em 1977, foi lançada a primeira edição da linguagem gerenciada por essa associação.</p><br>
+            <p>Javascript possui um importante papel no processo de desenvolvimento de páginas para internet, junto com HTML e CSS. Javascript é utilizado para definir o comportamento dos elementos da página. Os códigos escritos, também chamados de scripts, são interpretados diretamente pelos navegadores web.</p><br>
+            <p>O JavaScript não deve ser confundido com a linguagem de programação Java. Apesar de "Java" e "JavaScript" serem marcas registradas da Oracle nos EUA e em outros países, essas duas linguagens de programação são diferentes em sintaxe, semântica e casos de uso.</p><br><br>
+            <h3>Editores de Códigos</h3><br>
+            <p>Sabemos que programar não é tão simples quanto pensam por aí, mas existem ferramentas que podem facilitar e otimizar o dia a dia dos desenvolvedores, dentre as quais uma das mais importantes são os editores de código. Os editores de códigos são ferramentas que auxiliam na construção de projetos e são melhores que editores de texto tradicionais. As principais diferenças entre eles e os editores de texto tradicionais são as funcionalidades adicionais para gerenciar e editar código-fonte. Existem vários editores de código disponíveis no mercado atualmente e iremos listar alguns dos mais populares.</p><br>
+            <p><b>Vscode</b> ➜ <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></p><br>
+            <p>Um dos mais conhecidos do mercado, este editor foi lançado em 2015 pela Microsoft e se trata de um editor de código destinado ao desenvolvimento de aplicações em diversos contextos. O VSCode é uma ferramenta leve e multiplataforma e está disponível para Windows, Mac OS e Linux. Este editor de código atende a uma quantidade enorme de tecnologias, além de oferecer suporte para mais de 30 linguagens de programação, como JavaScript, C#, C++, PHP, Java, HTML, R, CSS, SQL, Markdown, TypeScript, LESS, SASS, Node.js e Python, bem como para outros formatos de arquivos comuns. Para isso, o VSCode utiliza o conceito de extensões, as quais potencializam muito as capacidades desse IDE. O VSCode é gratuito, open source e tem seu código disponibilizado no GitHub, o que permite que você contribua com seu desenvolvimento.</p><br>
+            <p><b>Codespace</b> ➜ <a href="https://codespace.app/" target="_blank">https://codespace.app/</a></p><br>
+            <p>O Codespace é um editor de código online colaborativo, baseado em navegador da Microsoft e Github. Este editor de código tem suporte para repositórios Git, extensões, além de contar com uma interface de linha de comando integrada para que seja possível editar, executar e depurar seus aplicativos de qualquer dispositivo. Isso possibilita que você trabalhe em qualquer lugar, além de tornar a colaboração com outros desenvolvedores mais fácil. Apesar de a idealizadora Microsoft planejar oferecer preços acessíveis conforme o uso de ambientes de nuvem, a funcionalidade de edição de código sempre será gratuita.</p><br>
+            <p><b>Atom</b> ➜ <a href="https://atom.io/" target="_blank">https://atom.io/</a></p><br>
+            <p>O Atom também é um editor de código open source e possui versões para várias plataformas, como Windows, Mac e Linux. Entre os diversos recursos que este software possui está o “autocomplete”, assim como a maioria dos editores, o que é extremamente útil no desenvolvimento de um projeto. Você pode ver por aí que o Atom pode ser considerado um editor de código “hackeável”, isso porque nele você pode mudar qualquer coisa do editor, já que foi desenvolvido em JavaScript, CSS e Node.js, o que o torna uma ferramenta bastante customizável.</p><br>
+            <p><b>Notepad++</b> ➜ <a href="https://notepad-plus-plus.org/" target="_blank">https://notepad-plus-plus.org/</a></p><br>
+            <p>Este editor é perfeito para iniciantes, embora não muito recomendado para os que desejam softwares mais robustos e profissionais. A interface do Notepad++ é bastante intuitiva e simples de usar, o que facilita seu uso e o dia a dia. Apesar de não ser um editor robusto, nele você encontra funções mais avançadas, o que pode ser atrativo para alguns programadores.</p><br><br>
+            <h3>Entrada, Processamento e Saída de Dados</h3><br>
+            <p>Em lógica de programação, o roteiro para resolver a maioria dos programas é:</p><br>
+            <p>a) Leia os dados de entrada</p>
+            <p>b) Realize o processamento dos dados</p>
+            <p>c) Apresente a saída dos dados</p><br>
+            <p>Em programas maiores essas etapas se misturam.</p><br>
+            <p>A etapa da entrada de dados consiste em pedir do usuário alguma informação, como por exemplo, digitar seu nome ou data de nascimento. Após essa etapa, geralmente ocorre a etapa de processamento desses dados, como calcular se você é maior de idade. E por fim, o programa apresenta a saída desse processamento, através da exibição das informações.</p><br>
+            <p>Para realizar essas etapas, as linguagens de programação utilizam comandos. Há vários comandos para realizar a entrada de dados. Na etapa de processamento, geralmente se trabalha com variáveis para realizar cálculos. E na etapa de saída são utilizados alguns comandos que mostram mensagens para o usuário.</p><br><br>
+            <h3>Variáveis e Constantes</h3><br>
+            <p>Uma variável é um espaço na memória do computador destinado a um dado que é alterado durante a execução do algoritmo. Você pode imaginar que as variáveis são como “caixas” destinadas a guardar algo.</p><br>
+            <p><img src="img/cap01/variaveis_gavetas.png" alt="Imagem"></p><br>
+            <p><img src="img/cap01/declaracao_variavel.png" alt="Imagem"></p><br>
+            <p>São exemplos de variáveis manipuladas em um programa: a descrição, a quantidade e o preço de um produto, ou então, o nome, o salário e a altura de uma pessoa. As variáveis devem possuir um nome e seguir algumas regras de nomenclatura.</p><br>
+            <p><img src="img/cap01/variaveis_exemplos.png" alt="Imagem"></p><br>
+            <p>Em JavaScript os nomes de variáveis não podem:</p><br>
+            <p>➜ Conter espaços</p>
+            <p>➜ Começar com números</p>
+            <p>➜ Conter caracteres especiais: +, -, *, /, (), !, @, #.</p>
+            <p>➜ Utilizar palavras reservadas da linguagem: function, var, new, for, return.</p><br>
+            <p>Variáveis com letras maiúsculas são diferentes de variáveis com letras minúsculas. Existe um padrão chamado <span>CAMELCASE</span>, que é usado em palavras compostas. Trata-se de, no início da segunda palavra, usar uma letra maiúscula. Exemplo: valorTotal, primeiraNota, dataVenda.</p><br>
+            <p>Para fazer com que uma variável receba um dado, utiliza-se o conceito de atribuição, que é feito através do sinal de igual <span>"="</span>. É possível declarar uma variável e atribuir-lhe diretamente um valor.</p><br>
+            <p><img src="img/cap01/variaveis_exemplos2.png" alt="Imagem"></p><br>
+            <p>Como citado acima, o dado fica guardando dentro da variável como se fosse em uma caixa.</p><br>
+            <p>Constantes: diferente das variáveis, as contantes não podem ser modificadas. Elas são usadas em situações em que alguns dados nunca sofrerão alterações, como por exemplo o valor de PI.</p><br>
+            <p><img src="img/cap01/constante_pi.png" alt="Imagem"></p><br><br>
+            <h3>Comentários</h3><br>
+            <p>Praticamente todas as linguagens de programação disponibilizam esta funcionalidade. Um comentário nada mais é que uma informação digitada dentro do seu código fonte que não altera nada no código. Dessa forma, os comentários ficam visíveis apenas para desenvolvedores. Fazer um comentário permite que o desenvolvedor possa deixar registradas algumas informações importantes. Este é um recurso muito útil, principalmente quando se trabalha em equipes de desenvolvimento, onde outras pessoas precisarão entender e utilizar o código fonte.</p><br>
+            <p>Comentários em HTML</p><br>
+            <p><img src="img/cap01/comentarios_html.png" alt="Imagem"></p><br>
+            <p>Comentários em CSS</p><br>
+            <p><img src="img/cap01/comentarios_css.png" alt="Imagem"></p><br>
+            <p>Comentários em JAVASCRIPT</p><br>
+            <p><img src="img/cap01/comentarios_javascript.png" alt="Imagem"></p><br>
+            <p>Exemplo:</p><br>
+            <p><img src="img/cap01/funcao_basica_soma.png" alt="Imagem"></p><br><br>
+            <h3>Tipos de Dados</h3><br>
+            <p>As variáveis em um programada podem ser de diversos tipos. Em JavaScript, os tipos principais de dados são <span>strings</span> (textos), números e valores <span>booleanos</span> (true ou false). Cada tipo de variável possui operações e comportamentos específicos.</p><br>
+            <p><img src="img/cap01/tipos_dados.png" alt="Imagem"></p><br>
+            <p><span>IMPORTANTE</span>: Em JavaScript não é necessário definir o tipo da variável na hora de declarar. O tipo é definido no momento da atribuição dos valores. A atribuição de um conteúdo entre aspas (aspas simples ou duplas) cria uma variável do tipo <span>String</span>. Para variáveis numéricas, não devem ser utilizadas as aspas. As booleanas podem conter os valores <span>true</span> ou <span>false</span>.</p><br><br>
+            <h3>Operadores</h3><br>
+            <p>Descreveremos a seguir alguns dos principais tipos de operadores.</p><br>
+            <p>➜ Operadores de atribuição</p>
+            <p>➜ Operadores de comparação</p>
+            <p>➜ Operadores aritméticos</p>
+            <p>➜ Operadores lógicos</p>
+            <p>➜ Operadores de string</p><br>
+            <p><span>Operador de atribuição</span>: um operador de atribuição atribui um valor à variável à esquerda. O operador de atribuição básico é o sinal de igual (=).</p><br>
+            <p>var idade = 18, significa que o valor 18 foi atribuido à variável idade.</p><br>
+            <p>Atribuição de adição: x += 1, é o mesmo que x = x + 1.</p><br>
+            <p>Atribuição de subtração: x -= 1, é o mesmo que x = x - 1.</p><br>
+            <p><span>Operador de comparação</span>: é quando queremos comparar dois ou mais valores para obtermos a resposta de verdadeiro ou falso. Os operadores de comparações possuem diversos sinais. Alguns deles são: Igual(==), Diferente(!=), Maior que(>), Menor que(<), Maior ou Igual(>=), Menor ou Igual(<=).</p><br>
+            <p>(18 == 18), a resposta dessa comparação é igual a true.</p>
+            <p>(5 != 7), a resposta dessa comparação é igual a true.</p>
+            <p>(5 > 7), a resposta dessa comparação é igual a false.</p>
+            <p>(5 < 7), a resposta dessa comparação é igual a true.</p>
+            <p>(8 >= 7), a resposta dessa comparação é igual a true.</p><br>
+            
+            <p><span>Operador aritmético</span>: os operadores aritméticos padrão são os de soma (+), subtração (-), multiplicação (*), divisão (/), módulo (%), exponenciação (**), incremento (++) e decremento(--).</p><br>
+            <p>5 + 3, retorna 8.</p>
+            <p>4 - 2, retorna 2.</p>
+            <p>6 * 2, retorna 12.</p>
+            <p>8 / 4, retorna 2.</p>
+            <p>7 % 2, retorna 1 pois o resto da divisão entre 7 e 2 é igual a 1.</p>
+            <p>2 ** 3, retorna 8. É o mesmo que 2 * 2 * 2.</p>
+            <p>++2, retorna 3. É o mesmo que 2 + 1.</p>
+            <p>--2, retorna 1. É o mesmo que 2 - 1.</p><br>
+            <p><span>Operador lógico</span>: o javascript fornece 3 operadores lógicos.</p><br>
+            <p>NÃO (NOT) - !</p>
+            <p>OU (OR) - ||</p>
+            <p>E (AND) - &&</p><br>
+            <p>Os operadores lógicos são importantes no JavaScript porque permitem comparar variáveis e fazer algo com base no resultado dessa comparação. Por exemplo, se o resultado da comparação for verdadeiro, você executa um bloco de código, se for falso, você executa outro bloco de código.</p><br>
+            <p>No operador E (AND - &&) - só vai resultar true quando os dois elementos comparados forem true.</p><br>
+            <p>true && true, retorna true</p>
+            <p>true && false, retorna false</p>
+            <p>false && true, retorna false</p>
+            <p>false && (3 == 4), retorna false</p><br>
+            <p>No operador OU (OR - ||) - só vai resultar false quando os dois elementos comparados forem false.</p><br>
+            <p>true || true, retorna true</p>
+            <p>true || false, retorna true</p>
+            <p>false || true, retorna true</p>
+            <p>false || (3 == 4), retorna false</p><br>
+            <p>No operador NÃO (NOT - !) - retorna o inverso, se for true retorna false e se for false retorna true.</p><br>
+            <p>!true, retorna false</p>
+            <p>!false, retorna true</p><br>
+            <p><span>Operador de string</span>: o operador de concatenação (+) concatena dois valores string, retornando outra string que é a união dos dois operandos.</p><br>
+            <p>Ex: ("minha " + "string"), exibe a string "minha string".</p><br><br>
+            <h3>Conversões de Tipos</h3><br>
+            <p>Em JavaScript podemos realizar algumas operações envolvendo tipos diferentes, como números e strings.</p><br>
+            <p>"20" * 2 ➜ multiplicação entre uma string e um número, resulta no número 40</p>
+            <p>"20" / 2 ➜ divisão entre uma string e um número, resulta no número 10</p>
+            <p>"20" - 2 ➜ subtração entre uma string e um número, resulta no número 18</p>
+            <p>"20" + 2 ➜ porém a adição entre uma string e um número, resulta no número 202 (concatenação)</p><br>
+            <p>Para resolver esse problema, precisamos converter o texto (string) em número. Isso pode ser feito pelos métodos <span>Number()</span>, <span>parseInt()</span> e <span>parseDouble()</span>.</p><br>
+            <p>var a = "20" ➜ aqui a variável "a" é declarada com uma string de valor "20"</p><br>
+            <p>Number(a) ➜ aqui o método Number() é usado para converter o valor de string para número, adicionando a variável "a" dentro do método.</p><br><br>
+            <h3>Saída de Dados Com Alert</h3><br>
+            <p>Agora iremos colocar a mão na massa e realizar nosso primeiro programa. Usaremos o editor <span>Visual Studio Code</span>, mas você pode instalar qualquer um dos editores de códigos que citamos mais acima.</p><br>
+            <p>Primeiramente iremos criar uma pasta que armazenará os arquivos necessários. Será criado no Desktop, porém pode ser locado em qualquer lugar, como nos Documentos por exemplo.</p><br>
+            <p><img src="img/cap01/pasta_desktop.png" alt="Imagem"></p><br>
+            <p>Ao abrir o editor Visual Studio Code, clice em "Arquivo" e depois em "Abrir Pasta". Selecione a pasta criada no Desktop.</p><br>
+            <p><img src="img/cap01/abrir_pasta_vscode.png" alt="Imagem"></p><br>
+            <p>Após a pasta ser aberta, clique "Novo Arquivo" e escreva "index.html".</p><br>
+            <p><img src="img/cap01/novo_arquivo_vscode.png" alt="Imagem"></p><br>
+            <p>Index é o nome padrão para arquivos em HTML e o html no final é a extensão.</p><br>
+            <p><img src="img/cap01/index_vscode.png" alt="Imagem"></p><br>
+            <p><span>Alert</span> é um método de saída de dados, que mostra no navegador o que foi escrito entre as aspas. Certifique-se de ter digitado os comandos da mesma forma como no exemplo e não esqueça de salvar. JavaScript é <span>case sensitive</span>, ou seja, diferencia letras maiúsculas de minúsculas.</p><br>
+            <p><img src="img/cap01/primeiro_programa_vscode.png" alt="Imagem"></p><br>
+            <p>Abra a pasta que você criou para armazenar o projeto e clique no arquivo <span>index.html</span>. Você também pode clicar com o botão direito do mouse no arquivo, selecionar "abrir com" e escolher o navegador que você quiser.</p><br>
+            <p><img src="img/cap01/navegador_vscode.png" alt="Imagem"></p><br>
+            <p>Ao executar o programa, a mensagem que você escreveu dentro das aspas é exibida em uma caixa no centro da tela. Se a caixa de alerta não foi exibida, verifique cuidadosamente se os comandos digitados estão corretos.</p><br>
+            <p><img src="img/cap01/saida_vscode.png" alt="Imagem"></p><br><br>
+            <h3>Entrada de Dados Com Prompt</h3><br>
+            <p>O método <span>prompt()</span> é uma das formas que o programa recebe dados do usuário. Ele exibe uma caixa com um texto e um espaço para digitação. Nesse próximo exemplo iremos usar o <span>prompt</span> (entrada de dados) e o <span>alert</span> (saída de dados).</p><br>
+            <p>Na linha 2, o <span>promp</span> é armazenado dentro da variável <span>nome</span>. Na linha 3, temos uma string <span>"Meu nome é: "</span> concatenado a variável <span>nome</span>, através do sinal de adição (+).</p><br>
+            <p><img src="img/cap01/entrada_vscode.png" alt="Imagem"></p><br>
+            <p>Ao abrir o programa no navegador, a primeira caixa apresentada será a de entrada de dados (prompt).</p><br>
+            <p><img src="img/cap01/entrada_navegador.png" alt="Imagem"></p><br>
+            <p>Após digitar o nome e clicar no botão OK, a segunda caixa irá abrir informando o nome digitado anteriormente, conforme foi escrito no comando alert (saída de dados).</p><br>
+            <p><img src="img/cap01/saida_navegador.png" alt="Imagem"></p><br><br>
+            <h3>Outros comandos importantes</h3><br>
+            <p>➜ Number()</p><br>
+            <p>Por padrão, o método <span>prompt</span> (entrada de dados) retorna uma <span>string</span>, não importando se o valor digitado dentro foi um número ou uma string. Sempre vai retornar uma string. Então para transformar o valor digitado em número de fato, devemos usar alguns métodos de conversão.</p><br>
+            <p>➜ toFixed()</p><br>
+            <p>O método toFixed() acrescenta casas decimais após um ponto (.). O número dentro do método toFixed indica o número de casas decimais que aparecerá. Ex: Caso o método toFixed(2) seja aplicado ao número 33, o seu resultado será 33.00.</p><br>
+            <p>var valor = 33</p>
+            <p>valor.toFixed(2), o resultado é igual a 33.00</p><br>
+            <p>➜ \n (quebra de linha)</p><br>
+            <p>O comando \n deve estar dentro da string. Esse comando serve para quebrar a linha. Tudo que vier depois do \n será escrito na linha abaixo.</p><br><br>
+            <h3>Exercícios</h3><br>
+            <p>Agora iremos realizar alguns exercícios envolvendo os temas estudados até agora. Para uma melhor fixação refaça os exercícios mais de uma vez, e se possível sem olhar os resultados. Aprender programação é similar a treinar um esporte, quanto mais você exercitar mais fácil se torna.</p><br>
+            <p><b>a )</b> Elabore um programa que leia um número, calcule o seu dobro e mostre o resultado na saída.</p>
+            <p><b>b )</b> Elabore um programa que leia dois números, calcule a soma desses números e mostre o resultado na saída.</p>
+            <p><b>c )</b> Elabore um programa que leia o valor de um jantar, calcule a taxa do garçom (10%), calcule o valor total a ser pago e mostre o resultado na saída.</p>
+            <p><b>d )</b> Elabore um programa que leia a duração de uma viagem em dias e horas. Calcule a duração total da viagem em horas e mostre o resultado na saída.</p>
+            <p><b>e )</b> Elabore um programa que leia um número. Calcule os seus vizinhos (número anterior e posterior) e mostre o resultado na saída.</p>
+            <p><b>f )</b> Elabore um programa para uma pizzaria, o qual leia o valor total de uma conta e quantos clientes irão pagar. Calcule o valor a ser pago por cada cliente e mostre o resultado na saída.</p><br><br>
+            <h3>Resolução dos Exercícios</h3><br>
+            <p><b>a )</b> Na linha 2 o método prompt é colocado dentro da variável numero. Na linha 4 a variável dobro recebe uma operação de multiplicação (numero * 2). Na linha 6 o método alert (saída de dados) mostra a string ("O dobro é: ") concatenada (+) com a variável dobro.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_a_codigo.png" alt="Imagem"></p><br>
+            <p>Ao abrir o programa no navegador, a primeira caixa apresentada será a de entrada de dados (prompt).</p><br>
+            <p><img src="img/cap01/exercicios/exerc_a_navegador1.png" alt="Imagem"></p><br>
+            <p>A segunda caixa será a saída de dados, conforme escrito no comando (método) alert.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_a_navegador2.png" alt="Imagem"></p><br>
+            <p><b>b )</b> Por padrão, o método prompt (entrada de dados) retorna uma string, não importando se o valor digitado dentro foi um número ou uma string. Sempre vai retornar uma string. Então para transformar o valor digitado em número de fato, devemos usar alguns método de conversão. Nesse caso usaremo o método Number().</p><br>
+            <p>Na linha 2 e 3, através do método Number(), convertemos o valor digitado para número. Na linha 5, a variável soma recebe os dois números e realiza uma operação de adição. Na linha 7, o método alert (saída de dados) mostra a string ("A soma é: ") concatenada com a variável soma.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_b_codigo.png" alt="Imagem"></p><br>
+            <p>Ao abrir o programa no navegador, a primeira caixa apresentada será a de entrada de dados (prompt).</p><br>
+            <p><img src="img/cap01/exercicios/exerc_b_navegador1.png" alt="Imagem"></p><br>
+            <p>Aqui temos outra entrada de dados.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_b_navegador2.png" alt="Imagem"></p><br>
+            <p>E aqui a saída de dados, conforme escrito no comando (método) alert.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_b_navegador3.png" alt="Imagem"></p><br>
+            <p><b>c )</b> Na linha 2, temos a entrada de dados (promp) e o valor recebido sendo convertido em um número através do método Number(). Na linha 4, a variável garcom está recebendo uma operação de adição (valorJantar * 0.10). Por que 0.10 ? Por que esse valor significa 10% do garcom (10 / 100 = 0.10). Na linha 6, temos a variável total que recebe uma operação de adição (valorJantar + garcom). Na linha 8, é apresentada a saída de dados através do  método alert.</p><br>
+            <p>Primeiro temos o método toFixed(2), que acrescenta duas casas decimais após um ponto (.). Caso o método seja aplicado ao número 33, o seu resultado será 33.00. O número dentro do método toFixed indica o número de casas decimais que aparecerá. O segundo comando é o \n que está dentro da string. Esse comando serve para quebrar a linha. Tudo que vier depois do \n será escrito na linha abaixo.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_c_codigo.png" alt="Imagem"></p><br>
+            <p>Ao abrir o programa no navegador, a primeira caixa apresentada será a de entrada de dados (prompt).</p><br>
+            <p><img src="img/cap01/exercicios/exerc_c_navegador1.png" alt="Imagem"></p><br>
+            <p>Aqui temos a saída de dados, conforme escrito no comando (método) alert. Notem que a quebra de linha aconteceu devido o comando \n.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_c_navegador2.png" alt="Imagem"></p><br>
+            <p><b>d )</b> Nas linhas 2 e 3, temos duas entradas de dados através do método prompt() e seus valores são convertidos para número através do método Number(). Na linha 5, a variável total recebe uma expressão, onde primeiro é resolvido o que está entre parênteses. Na linha 7, é apresentada a saída de dados através do método alert().</p><br>
+            <p><img src="img/cap01/exercicios/exerc_d_codigo.png" alt="Imagem"></p><br>
+            <p>Ao abrir o programa no navegador, a primeira caixa apresentada será a de entrada de dados (prompt).</p><br>
+            <p><img src="img/cap01/exercicios/exerc_d_navegador1.png" alt="Imagem"></p><br>
+            <p>Aqui temos outra entrada de dados.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_d_navegador2.png" alt="Imagem"></p><br>
+            <p>Aqui temos a saída de dados, conforme escrito no comando (método) alert.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_d_navegador3.png" alt="Imagem"></p><br>
+            <p><b>e )</b> Na linha 2, temos a entrada de dados prompt() que é convertida em número através do Number(). Na linha 4 e 5, temos duas variáveis que recebem operações. Na linha 7, temos a saída de dados alert(). Os valores dentro do alert foram quebrados com o "enter" para caber na tela, isso não altera a saída de dados no navegador.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_e_codigo.png" alt="Imagem"></p><br>
+            <p>Ao abrir o programa no navegador, a primeira caixa apresentada será a de entrada de dados (prompt).</p><br>
+            <p><img src="img/cap01/exercicios/exerc_e_navegador1.png" alt="Imagem"></p><br>
+            <p>Aqui temos a saída de dados, conforme escrito no comando (método) alert. As linhas foram quebradas usando o comando \n.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_e_navegador2.png" alt="Imagem"></p><br>
+            <p><b>f )</b> Na linha 2 e 4, temos uma entrada de dados prompt() onde o valor recebido é convertido em número através do método Number(). Na linha 6, temos a variável valorPorCliente recebendo uma operação de divisão. Na linha 8, temos a saída de dados alert(), onde novamente o método toFixed(2) é usado para acrescentar 2 casas decimais após um número. Temos também o comando \n para quebrar a linha.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_f_codigo.png" alt="Imagem"></p><br>
+            <p>Ao abrir o programa no navegador, a primeira caixa apresentada será a de entrada de dados (prompt).</p><br>
+            <p><img src="img/cap01/exercicios/exerc_f_navegador1.png" alt="Imagem"></p><br>
+            <p>Aqui temos novamente uma entrada de dados.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_f_navegador2.png" alt="Imagem"></p><br>
+            <p>Aqui temos a saída de dados, conforme escrito no comando (método) alert. As linhas foram quebradas usando o comando \n.</p><br>
+            <p><img src="img/cap01/exercicios/exerc_f_navegador3.png" alt="Imagem"></p><br><br>
+            <div id="voltar-topo">
+                <a href="#sumario">Voltar p/ o Topo</a>
+            </div><br><br>
+    </main>
+</body>
+</html>

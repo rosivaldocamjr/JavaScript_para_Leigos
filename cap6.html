@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap 6 - Repetições</title>
+    <link rel="stylesheet" href="css/paginaInicial.css">
+</head>
+<body>
+    <div id="div">
+        <div id="voltar-pag-inicial">
+            <a href="index.html">Voltar p/ Página Inicial</a>
+        </div>
+        <h2>Repetições</h2>
+        <p>As estruturas de repetição são úteis quando precisamos repetir N vezes a execução de um bloco de comandos até que uma condição seja atendida. Elas são chamadas de laços de repetição ou loops.</p><br>
+        <p>Um bom exemplo do seu uso é quando queremos mostrar uma tabuada, que nada mais é que uma lista. Observe que a linha se repete 10x.</p><br>
+        <p><img src="img/cap06/tabuada.png" alt="Imagem"></p><br>
+        <p>Para construir as estruturas de repetição, utilizaremos os três principais comandos: <span>for, while e o do...white</span>.</p><br><br>
+        <h3>For</h3><br>
+        <p>A sintaxe do comando for é composta por três instruções:</p><br>
+        <p>➜ valor inicial da variável de controle</p>
+        <p>➜ condição que determina se a repetição vai continuar ou não</p>
+        <p>➜ incremento/decremento da variável de controle</p><br>
+        <p><img src="img/cap06/estrutura_for.png" alt="Imagem"></p><br>
+        <p> As instruções são separadas por ponto e vírgula. Entre as chaves { } devem ser inseridos os comandos que serão repetidos. O incremento <span>i++</span> é a mesma coisa que <span>i = i + 1</span>.</p><br>
+        <p>A repetição é controlada por uma variável que, no exemplo acima, inicia em 1.</p><br>
+        <p><span>IMPORTANTE</span>: A estrutura termina quando a condição resulta em <span>false (falso)</span>.</p><br>
+        <p>No exemplo seguinte veremos a sequência de execução das instruções:</p><br>
+        <p><img src="img/cap06/estrutura_for2.png" alt="Imagem"></p><br>
+        <p>1º ➜ let i = 1</p>
+        <p>2º ➜ i <= 3 (se i for menor ou igual a 3, a estrutura continua)</p>
+        <p>3º ➜ Comando que será Repetido</p>
+        <p>4º ➜ i++ (aqui o i é somado com 1, que resulta em 2)</p><br>
+        <p>5º ➜ i <= 3 (se i for menor ou igual a 3, a estrutura continua. 2 é menor que 3.)</p>
+        <p>6º ➜ Comando que será Repetido</p>
+        <p>7º ➜ i++ (i é somado com 1, que resulta em 3)</p><br>
+        <p>8º ➜ i <= 3 (aqui o i é igual a 3 e a estrutura continua)</p>
+        <p>9º ➜ Comando que será Repetido</p>
+        <p>10º ➜ i++ (i é somado com 1, que resulta em 4)</p><br>
+        <p>11º ➜ i <= 3 (aqui o i é 4, maior que 3, então a estrutura encerra, pois a condição é falsa)</p><br>
+        <p>Note que o <span>incremento/decremento</span> é executado por último, após o <span>"Comando que será Repetido"</span>.</p><br>
+        <p><span>Exemplo:</span></p><br>
+        <p>Nesse exemplo, o programa deve ler um número e apresentar a tabuada desse número. Ao abrir o arquivo html com o navegador, temos a seguinte imagem.</p><br>
+        <p><img src="img/cap06/exemplo_tabuada1.png" alt="Imagem"></p><br>
+        <p>No arquivo html abaixo temos uma nova tag, a <span>pre</span>. A tag <span>pre</span> é a tag utilizada para representar texto pré-formatado. Um texto dentro desse elemento é exibido em uma fonte diferente da fonte original do arquivo. Espaços em branco são mantidos no texto da mesma forma em que este foi digitado.
+        </p><br>
+        <p><img src="img/cap06/exemplo_tabuada2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exemplo_tabuada3.png" alt="Imagem"></p><br>
+        <p>Dentro da função <span>mostrarTabuada( )</span>, temos primeiramente a referência com os elementos HTML. Logo depois, o valor digitado dentro do <span>inNumero</span> é transformado em número (Number) e armazenado dentro da variável <span>numero</span>.</p><br>
+        <p>Em seguida temos a criação da variável <span>saida</span> com o valor vazio. Essa variável será responsável por armazenar todo o conteúdo da tabuada (4 X 1 = 4, 4 X 2 = 8, ...).</p><br>
+        <p>Agora temos a estrutura <span>for</span>. A instrução <span>let i = 1</span> significa que a repetição começará no valor 1. A instrução <span>i <= 10</span> é a condição, se <span>i</span> for menor ou igual a 10, o comando dentro das chaves irá ser executado. Com o resultado da condição igual a <span>true</span>, o comando entre as chaves é executado. O sinal de <span>+=</span> após a variável <span>saida</span>, significa que a variável <span>saida</span> receberá ela mesma mais (+) a <span>template string</span> seguinte.</p><br>
+        <p>saida = saida + `${numero} X ${i} = ${numero * i}\n`</p><br>
+        <p>O incremento (i++) é executado por último, após o comando entre as chaves { }.</p><br>
+        <p>Perceba que a variável de controle é o <span>i</span>, que inicialmente tinha o valor de 1. Na ordem, a estrutura segue essa sequência:</p><br>
+        <p>1º ➜ variável i é iniciada com o valor 1.</p>
+        <p>2º ➜ é verificado na condição se o i é menor ou igual a 10.</p>
+        <p>3º ➜ se for true, o comando entre as chaves é executado. Onde tem o i, será o valor 1. E esse comando todo será armazenado dentro da variável saida.</p>
+        <p>4º ➜ em seguida, o i é incrementado (i++), o seu valor que era de 1, será somado com mais 1, que agora terá o valor 2.</p><br>
+        <p>5º ➜ agora o valor de i é 2, e voltamos a instrução de condição (i <= 10) e a verificação é feita, se i é menor ou igual a 10.</p>
+        <p>6º ➜ se for true, o comando entre chaves é executado e o resultado é armazenado novamente dentro da variável saida.</p>
+        <p>7º ➜ em seguida, o i é incrementado (i++), o seu valor que era de 2, será somado com mais 1, que agora terá o valor 3.</p><br>
+        <p>Esses passos serão realizados até a condição <span>(i <= 10)</span> resultar em <span>false</span>.</p><br>
+        <p>No comando <span>outSaida.innerHTML = saida</span>, o conteúdo que está dentro da variável <span>saida</span> será inserido dentro do elemento <span>pre</span> que possui o <span>id="outSaida"</span>. Essa inserção é graças ao comando <span>innerHTML</span>.</p><br>
+        <p>O <span>innerHTML</span> altera o conteúdo de um elemento.</p><br>
+        <p><span>Exemplo:</span></p><br>
+        <p>Nesse exemplo faremos um programa que leia um número e apresente uma sequência decrescente até o número 1.</p><br>
+        <p><img src="img/cap06/exemplo_decrescente1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exemplo_decrescente2.png" alt="Imagem"></p><br>
+        <p>A variável saida é onde ficará armazenado todos os números da sequência. Antes de entrar na estrutura de repetição (for), é armazenado na variável <span>saida</span> a string <span>"Decrescendo de ${numero} a 1: ${numero}"</span>, que será mostrada (por exemplo) da seguinte forma <span>"Decrescendo de 12 a 1: 12"</span>.</p><br>
+        <p>Dentro da estrutura <span>for</span> será armazenado (dentro da variável saida) somente o restante dos números da sequência que decrescerá, pois na declaração da variável <span>saida</span> (antes do for) já foi armazenado a string <span>"Decrescendo de ${numero} a 1: ${numero}"</span>.</p><br>
+        <p>Dentro da estrutura for, primeiramente temos a declaração da variável de controle. A variável <span>i</span> recebe <span>numero - 1</span>, pois o número digitado já foi escrito anteriormente dentro da variável <span>saida</span>. Então, se o número digitado for 12 (por exemplo), a variável de controle será 11.</p><br>
+        <p>Logo em seguida temos a condição, se i for maior ou igual a 1. Se resultar em <span>true</span>, o comando entre as chaves { } será executado. O sinal de <span>+=</span> significa que a variável saida recebe ela mesma mais (+) a <span>template string</span>.</p><br>
+        <p>saida = saida + `, ${i}`</p><br>
+        <p>Na primeira vez em que o comando entre as chaves { } é executado, temos a variável <span>i</span> com o valor de 11 (por exemplo). Então a variável saida receberá a seguinte string:</p><br>
+        <p>`Decrescendo de 12 a 1: 12, 11`</p><br>
+        <p>Após isso, o <span>i</span> é decrementado <span>(i = i - 1)</span>. A cada mudança da variável de controle (i), a condição é verificada, se for <span>true</span> o comando dentro das chaves { } é executado e logo em seguida ocorre o decremento. Esse loop acontece até a condição (i >= 1) retornar <span>false</span>.</p><br>
+        <p><img src="img/cap06/exemplo_decrescente3.png" alt="Imagem"></p><br><br>
+        <h3>While - Repetição com teste no início</h3><br>
+        <p>Um laço de repetição também pode ser criado com o comando <span>while</span>, que realiza o teste condicional logo no inicio, diferente do for. A tradução da estrutura while é "enquanto a condição for verdadeira, execute".</p><br>
+        <pre>
+            while (condição) {
+                comandos
+            }
+        </pre>
+        <p><span>Exemplo:</span></p><br>
+        <p>Para realizarmos os exemplos iremos colocar o programa dentro da tag <span>script</span> e salvaremos o arquivo no <span>index.html</span>. Iremos abrir o arquivo <span>index.html</span> com o navegador. Para visualizarmos a saída (console.log) iremos abrir o console do navegador clicando com o botão direito do mouse e clicando em <span>"Inspecionar"</span>.</p><br>
+        <p><img src="img/cap06/exemplo_while3.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exemplo_while2.png" alt="Imagem"></p><br>
+        <p>No arquivo <span>index.html</span> teremos o seguinte programa:</p><br>
+        <p>Note que a variável de controle (let i = 5) é declarada fora da estrutura <span>while</span>. Em seguida a variável <span>saida</span> é declarada com o valor vazio.</p><br>
+        <p><img src="img/cap06/exemplo_while1.png" alt="Imagem"></p><br>
+        <p><span>IMPORTANTE</span>: Como o teste é realizado no início, é possível que os comandos dentro das chaves { } não sejam executados.</p><br><br>
+        <h3>Do ... While - Repetição com teste no final</h3><br>
+        <p>Na estrutura <span>do ... while</span> o teste condicional é realizado no final.</p><br>
+        <pre>
+            do {
+                comandos
+            } while (condição)
+        </pre>
+        <p><span>Exemplo:</span></p><br>
+        <p>Nota-se que a variável <span>inicio</span> é mostrada logo no começo da estrutura dentro do comando <span>do</span> e em seguida é incrementada (inicio++). Em seguida, é verificado a condição (inicio < voltas), se for <span>true</span> a estrutura volta para o começo do comando <span>do</span>.</p><br>
+        <p><img src="img/cap06/exemplo_do_while1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exemplo_do_while2.png" alt="Imagem"></p><br>
+        <p><span>IMPORTANTE</span>: No <span>do ... while</span>, fica garantido que os comandos dentro das chaves { } serão realizados no mínimo uma vez.</p><br><br>
+        <h3>Break e Continue - Interrupções nos laços</h3><br>
+        <p>Em JavaScript temos dois comandos que são utilizados nas estruturas de repetição. O <span>break</span> e o <span>continue</span>. O <span>break</span> sai do laço de repetição e o <span>continue</span> retorna ao início do laço.</p><br>
+        <p><img src="img/cap06/break_continue.png" alt="Imagem"></p><br>
+        <p>Os comandos <span>break</span> e <span>continue</span> podem ser usados nas três estruturas de repetição: <span>for, while e do ... while</span>. Caso o comando <span>continue</span> seja executado em um laço <span>for</span>, o incremento ou decremento ocorre normalmente.</p><br>
+        <p><span>Exemplo:</span></p><br>
+        <p>No exemplo abaixo, temos um <span>while</span> em que a sua condição sempre vai ser <span>true</span>. O laço só irá finalizar quando o comando <span>break</span> for executado.</p><br>
+        <p>Ao entrar na estrutura <span>if</span> pela primeira vez, o <span>i</span> tem valor de 1. Logo, é verificado a condição se <span>i</span> é menor que 5, se resultar em <span>true</span>, o <span>i</span> é incrementado (i = i + 1). Quando o comando <span>continue</span> é executado, o laço <span>while</span> volta para o início.</p><br>
+        <p>O laço de repetição <span>while</span> só irá finalizar quando o <span>i</span> for 5, pois entrará no comando <span>else if</span> e o comando <span>break</span> será executado. Logo em seguida, o comando <span>console.log(i)</span> é executado.</p><br>
+        <p><img src="img/cap06/exemplo_break_continue1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exemplo_break_continue2.png" alt="Imagem"></p><br><br>
+        <h3>Contadores e Acumuladores</h3><br>
+        <p>Características:</p><br>
+        <p>➜ A variável contadora ou acumuladora deve receber uma atribuição inicial, geralmente zero.</p>
+        <p>➜ A variável contadora ou acumuladora deve receber ela mesma mais algum valor.</p><br>
+        <p>Diferença:</p><br>
+        <p>➜ O contador recebe ele mesmo mais 1.</p>
+        <p>➜ O acumulador recebe ele mesmo mais uma variável.</p><br>
+        <p><span>Exemplo:</span></p><br>
+        <p>O programa faz a leitura de contas que devem ser pagas por um usuário. Na saída, as contas são exibidas e, logo após, o número de contas (contador) e a soma dos valores (acumulador) são destacados.</p><br>
+        <p><img src="img/cap06/exemplo_contadores_acumuladores.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exemplo_contadores_acumuladores2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exemplo_contadores_acumuladores3.png" alt="Imagem"></p><br>
+        <p>No próximo exemplo, o programa receberá um número e informará se ele é primo ou não. O número primo é aquele que possui dois divisores, 1 e ele mesmo.
+        </p><br>
+        <p><img src="img/cap06/exemplo_numero_primo.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exemplo_numero_primo2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exemplo_numero_primo3.png" alt="Imagem"></p><br><br>
+        <h3>Exercícios</h3><br>
+        <p><b>a )</b> Elabore um programa que leia o nome de uma fruta e um número. O número será a quantidade de vezes que a fruta deve ser repetida. Os nomes devem ser separados por um asterisco (*).</p><br>
+        <p><img src="img/cap06/exercicios/exercicio_a1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exercicios/exercicio_a2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exercicios/exercicio_a3.png" alt="Imagem"></p><br>
+        <p><b>b )</b> Elabore um programa que leia o número inicial de chinchilas e anos, e informe a previsão de cada ano, sabendo que a cada ano o número de chinchilas triplica. O número inicial de chinchilas deve ser no mínimo 2 (casal).</p><br>
+        <p><img src="img/cap06/exercicios/exercicio_b1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exercicios/exercicio_b2.png" alt="Imagem"></p><br>
+        <p>Na variável resposta (abaixo), iniciamos com a string acumuladora <span>(`1º Ano: ${chinchilas} Chinchilas\n`)</span>. Devido isso, no loop <span>for</span>, a variável de controle se inicia em 2 e a repetição da estrutura <span>for</span> acontece até o valor digitado na variável anos. A cada repetição, o valor de chinchilas é multiplicado por 3 e armazenado na variável chinchilas.</p><br>
+        <p>Logo em seguida, temos o comando <span>resposta += `${i}º Ano: ${chinchilas} Chinchilas\n`</span>, que a cada repetição acumula strings dessa forma (por exemplo):</p><br>
+        <p>2º Ano: 24 Chinchilas</p>
+        <p>3º Ano: 72 Chinchilas</p>
+        <p>4º Ano: 216 Chinchilas</p><br>
+        <p>Todas essas strings são armazenadas na variável acumuladora <span>resposta</span>.</p><br>
+        <p><img src="img/cap06/exercicios/exercicio_b3.png" alt="Imagem"></p><br>
+        <p><b>c )</b> Elabore um programa que leia um número e verifique se ele é ou não um número perfeito. Número perfeito é aquele que é igual a soma dos seus divisores inteiros (exceto o próprio número). O programa deve exibir os divisores do número e a soma deles.</p><br>
+        <p><img src="img/cap06/exercicios/exercicio_c1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exercicios/exercicio_c2.png" alt="Imagem"></p><br>
+        <p>Antes do loop for, temos uma variável acumuladora (divisores) e uma variável contadora (soma). As duas variáveis já são iniciadas com valores, logo a variável de controle dentro do for começa em 2.</p><br>
+        <p>A cada repetição, uma estrutura <span>if</span> (condição) é executada. Se a divisão de numero por i tiver o resto (%) igual a 0, os comandos entre as chaves { } serão executados.</p><br>
+        <p><img src="img/cap06/exercicios/exercicio_c3.png" alt="Imagem"></p><br>
+        <p><b>d )</b> Elabore um programa que leia dois números e realize a sua contagem, crescente ou decrescente. Números negativos são permitidos.</p><br>
+        <p><img src="img/cap06/exercicios/exercicio_d1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exercicios/exercicio_d2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap06/exercicios/exercicio_d3.png" alt="Imagem"></p><br><br>
+        <div id="voltar-topo">
+            <a href="#div">Voltar p/ o Topo</a>
+        </div><br><br>
+    </div>
+</body>
+</html>
