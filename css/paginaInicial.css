@@ -59,24 +59,15 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 230px;
+    top: 260px;
     right: 360px;
     border: 2px solid red;
     color: red;
     transform: rotate(-10deg);
 }
-#capa h1 {
-    font-size: 80px;
-    color: rgb(239, 216, 29);
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-shadow: 1px 1px 1px black;
-    animation: pulsate 1s infinite;
-}
-@keyframes pulsate {
-    0% {
-        text-shadow: 1px 1px 7px blue;
-    }
+#capa img {
+    border: none;
+    box-shadow: none;
 }
 #capa-info {
     width: 60%;
