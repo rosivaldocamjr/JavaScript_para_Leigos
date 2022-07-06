@@ -13,10 +13,220 @@
             <a href="index.html">Voltar p/ Página Inicial</a>
         </div>
         <h2>Arrays</h2>
-        <div id="pagina-construcao">
-            <h3>Página em Construção ...</h3>
-            <p><img src="img/pagina_construcao.png" alt="Imagem"></p>
-        </div>
+        <p>A partir desse capítulo alguns exemplo serão mostrados (saída de dados) no <span>terminal</span> do editor <span>VS Code</span>. Ao invés de utilizarmos o método <span>alert( )</span> para vermos a saída de dados no navegador, poderemos usar o comando <span>console.log( )</span>. Veremos alguns exemplos a seguir.</p><br>
+        <p><strong>Saída com alert( )</strong></p><br>
+        <p>Para usarmos o alert( ) devemos escrever o código javascript dentro de um arquivo <span>.html</span> ou <span>"linkar"</span> o arquivo javascript no final do <span>body</span> do HTML.</p><br>
+        <p>Note que, para arquivo de extensão <span>.html</span> entender que estamos escrevendo javascript, devemos escrever nosso código dentro da tag <span>script</span>.</p><br>
+        <p><img src="img/cap07/exemplo_alert1.png" alt="Imagem"></p><br>
+        <p>Ao abrir o arquivo usando o navegador teremos a seguinte situação:</p><br>
+        <p><img src="img/cap07/exemplo_alert2.png" alt="Imagem"></p><br>
+        <p>A outra forma é <span>"linkando"</span> o arquivo javascript no final do body do HTML:</p><br>
+        <p><img src="img/cap07/exemplo_alert3.png" alt="Imagem"></p><br>
+        <p>Ao abrir o arquivo através do navegador teremos a seguinte situação:</p><br>
+        <p><img src="img/cap07/exemplo_alert4.png" alt="Imagem"></p><br>
+        <p><strong>Saída de dados no Terminal do VS Code usando o comando console.log( )</strong></p><br>
+        <p>Para rodarmos javascript no terminal do vs code, primeiramente devemos instalar um programa chamado <span>"Node"</span>.</p><br>
+        <p>Para instalar acesse o site: <a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download/</a></p><br>
+        <p>Deixaremos aqui dois vídeos ensinando como instalar e configurar o <span>node</span>:</p><br>
+        <p><a href="https://www.youtube.com/watch?v=-cLzUD0TQY0" target="_blank">https://www.youtube.com/watch?v=-cLzUD0TQY0</a></p>
+        <p><a href="https://www.youtube.com/watch?v=65gksI59EIY&ab_channel=ProgramadorViking" target="_blank">https://www.youtube.com/watch?v=65gksI59EIY&ab_channel=ProgramadorViking</a></p><br>
+        <p>Com o node já instalado, podemos abrir o Terminal do VS Code com o comando <span>Ctrl + '</span> (Control mais Aspas Simples) ou ir no menu superior clicar em <span>"Ver"</span> e logo depois clicar em <span>"Terminal"</span>.</p><br>
+        <p><img src="img/cap07/exemplo_terminal.png" alt="Imagem"></p><br>
+        <p>Teremos a seguinte situação:</p><br>
+        <p><img src="img/cap07/exemplo_terminal2.png" alt="Image"></p><br>
+        <p>Para executarmos o arquivo <span>script.js</span>, digitaremos no terminal o comando <span>"node nome_do_arquivo.js"</span> e apertamos o <span>Enter</span>.</p><br>
+        <p><img src="img/cap07/exemplo_terminal3.png" alt="Imagem"></p><br>
+        <p>Agora estamos prontos para iniciar os estudos de Arrays.</p><br><br>
+        <h3>Arrays</h3><br>
+        <p>Vetores ou Arrays são estruturas que permitem armazenar uma <span>lista de dados</span> na memória principal do computador.</p><br>
+        <p>Representação visual do array de nome <span>produtos</span>.</p><br>
+        <p><img src="img/cap07/representacao_arrays.png" alt="Imagem"></p><br>
+        <p>O índice numérico (que começa em 0) identifica cada elemento da lista.</p><br>
+        <p>Para referenciar um item/elemento do vetor, devemos indicar seu nome, seguido por um número (índice) entre colchetes.</p><br>
+        <p>produtos[0] ➜ retorna o elemento Arroz.</p><br>
+        <p>Podemos alterar o elemento/item da lista fazendo uma nova atribuição a um elemento do vetor:</p><br>
+        <p>produtos[2] = "Leite" ➜ significa que no índice 2 onde era Pimenta, agora será Leite.</p><br>
+        <p><span>IMPORTANTE</span>: Na linguagem JavaScript, não é necessário indicar o número total de elementos do vetor na sua declaração.</p><br>
+        <p>Para declarar um vetor, devemos utilizar uma das seguintes formas:</p><br>
+        <p>var produtos = [ ]</p>
+        <p>var produtos = new Array( )</p><br>
+        <p>Também é possível declarar um vetor com algum conteúdo inicial:</p><br>
+        <p>var produtos = ["Arroz", "Feijão", "Iogurte"]</p><br><br>
+        <h3>Diferença entre as variáveis e os vetores</h3><br>
+        <p>A <span>variável</span> armazena apenas um valor por vez, quando uma nova atribuição a essa variável é realizada, o seu valor anterior é perdido.</p><br>
+        <p> O <span>vetor/array</span> permite armazenar um conjunto de dados e acessar todos os seus elementos através do índice.</p><br><br>
+        <h3>Inclusão e Exclusão de elementos/itens do array.</h3><br>
+        <p>push( ) ➜ adiciona um elemento ao final do vetor</p>
+        <p>unshift( ) ➜ adiciona um elemento ao inicio do vetor e desloca os elementos</p>
+        <p>pop( ) ➜ remove o último elemento do vetor</p>
+        <p>shift( ) ➜ remove o primeiro elemento do vetor e desloca os elementos</p><br>
+        <p>Exemplo:</p><br>
+        <p>var cidades = ["Pelotas"] ➜ declaração do array cidades com um elemento Pelotas</p>
+        <p>cidades[0] ➜ retorna o elemento Pelotas</p><br>
+        <p>cidades.push("São Lourenço") ➜ adiciona o elemento São Lourenço ao final do array</p>
+        <p>cidades[0] ➜ retorna o elemento Pelotas</p>
+        <p>cidades[1] ➜ retorna o elemento São Lourenço</p><br>
+        <p>cidades.unshift("Porto Alegre") ➜ adiciona o elemento Porto Alegre ao início do array</p>
+        <p>cidades[0] ➜ retorna o elemento Porto Alegre</p>
+        <p>cidades[1] ➜ retorna o elemento Pelotas</p>
+        <p>cidades[2] ➜ retorna o elemento São Lourenço</p><br>
+        <p>var retirada = cidades.pop( ) ➜ remove o último elemento do vetor e o armazena na variável retirada</p>
+        <p>cidades[0] ➜ retorna o elemento Porto Alegre</p>
+        <p>cidades[1] ➜ retorna o elemento Pelotas</p><br>
+        <p>retirada = cidades.shift( ) ➜ remove o primeiro elemento do array e o armazena na variável retirada</p>
+        <p>cidades[0] ➜ retorna o elemento Pelotas</p><br>
+        <p><span>IMPORTANTE</span>: As operações de exclusão de elementos são atribuídas à variável retirada. Essa variável recebe o elemento removido do array.</p><br><br>
+        <h3>Tamanho do vetor</h3><br>
+        <p>Na manipulação de vetores temos uma propriedade muito importante chamada <span>length</span>. Essa propriedade retorna o número de elementos do vetor (tamanho do vetor). Ela é usada quando queremos percorrer a lista, realizar exclusões ou exibir o número total de elementos/itens do vetor. Para percorrer e exibir o número de elementos de um vetor, podemos utilzar o comando <span>for</span>.</p><br>
+        <p>Exemplo:</p><br>
+        <p><img src="img/cap07/exemplo_length1.png" alt="Imagem"></p><br>
+        <p>No comando for temos a variável de controle <span>(i)</span> iniciando com 0. Na condição temos <span>i</span> menor que <span>cidades.length</span>. O tamanho do vetor é igual a 3, pois tem 3 elementos/itens. Então na primeira passagem pela condição, temos <span>0 < 3</span>. Com a condição resultando em <span>true</span>, a variável <span>acumulador</span> irá armazenar o primeiro elemento do vetor, pois em <span>cidade[0]</span> temos o elemento <span>"Pelotas"</span>. Em seguida o <span>i</span> é incrementado e passa de 0 para 1, e novamente entra na parte da condição. Segue esse <span>loop</span> até a condição resultar em <span>false</span>.</p><br>
+        <p>Em seguida temos saída através do método <span>alert()</span>.</p><br>
+        <p><img src="img/cap07/exemplo_length2.png" alt="Imagem"></p><br><br>
+        <h3>toString( ) e join( )</h3><br>
+        <p>Outra forma de exibir o conteúdo do vetor é pelo uso dos métodos <span>toString( )</span> e <span>join( )</span>. Eles convertem o conteúdo do vetor em uma <span>string</span>.</p><br>
+        <p>No método <span>toString( )</span> uma vírgula é inserida entre os elementos.</p><br>
+        <p><img src="img/cap07/exemplo_tostring1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exemplo_tostring2.png" alt="Imagem"></p><br>
+        <p>No método <span>join( )</span> podemos indicar qual caractere vai separar os itens. Referenciar o nome do vetor seguido pelo método <span>join( )</span> sem o caractere de separação gera uma saída idêntica à <span>toString( )</span>.</p><br>
+        <p><img src="img/cap07/exemplo_tojoin1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exemplo_tojoin2.png" alt="Imagem"></p><br><br>
+        <h3>Localizar Conteúdo</h3><br>
+        <p>Como alguns vetores são grandes, temos alguns métodos que nos auxiliam no controle de seu conteúdo. Iremos ver dois métodos que verificam a existência ou não de um conteúdo do vetor.</p><br>
+        <p>No <span>indexOf( )</span>, a busca ocorre a partir do início do vetor. Já no <span>lastIndexOf( )</span> a busca é do final até o seu início. Caso o conteúdo exista no vetor, o número do índice é retornado. Caso o conteúdo pesquisado não exista no vetor, o valor <span>-1</span> é devolvido pelo método.</p><br>
+        <p>Exemplo:</p><br>
+        <p>var idades = [10, 17, 14, 19, 10, 11]</p><br>
+        <p>alert(idades.indexOf(17)) ➜ retorna 1</p>
+        <p>alert(idades.lastIndexOf(10)) ➜ retorna 4 (o índice do último 10)</p>
+        <p>alert(idades.indexOf(9)) ➜ retorna -1</p><br><br>
+        <h3>Vetores de Objetos</h3><br>
+        <p>Um objeto é uma coleção de dados e funcionalidades (que geralmente consistem em diversas variáveis e funções). Tais dados e funcionalidades também são chamadas de propriedades e métodos quando estão dentro de objetos.</p><br>
+        <p>Exemplo de um objeto:</p><br>
+        <p><img src="img/cap07/exemplo_objeto1.png" alt="Imagem"></p><br>
+        <p>Como usar um objeto ?</p><br>
+        <p>Caso você precise usar algum atributo/propriedade do objeto, basta digitar o nome do objeto seguido de ponto (.) e o nome do atributo ou do método.</p><br>
+        <p>Ex: <span>pessoa.nome</span> retornará a string <span>"Joca"</span>.</p><br>
+        <p>Um vetor pode conter uma lista de nomes ou números. Também é possível definir um vetor que contenha uma lista de objetos com alguns atributos. Um vetor de objetos é declarado da mesma forma que um vetor simples. Na inserção de itens no vetor devem-se indicar os atributos que o compõem.</p><br>
+        <p>Exemplo de um vetor de objeto:</p><br>
+        <p><img src="img/cap07/exemplo_vetor_objeto.png" alt="Imagem"></p><br>
+        <p>Definir um vetor/array de objetos nos permite realizar operações sobre esse vetor.</p><br>
+        <p>Exemplo:</p><br>
+        <p><img src="img/cap07/exemplo_vetor_objeto2.png" alt="Imagem"></p><br>
+        <p>No exemplo acimo o vetor é declarado, logo em seguida é inserido dois veículos através do comando <span>push</span>. Note que os objetos sempre ficam dentro de <span>chaves { }</span>. O comando <span>for</span> foi usado para percorrer os elementos do vetor e através do comando <span>console.log</span> foi apresentado o conteúdo.</p><br><br>
+        <h3>Pesquisar e Filtrar Dados</h3><br>
+        <p>Após possuírmos um conjunto de dados em uma lista, podemos realizar algumas operações sobre as listas, como a pesquisa ou o filtro de dados.</p><br>
+        <p>Exemplo de filtro de dados: obtenção do nome e da nota dos alunos aprovados.</p><br>
+        <p>Nos programas que realizam essas operações um cuidado especial é necessário: o de informar quando a pesquisa não encontrou os dados. Imagine que você está em um site de clips/músicas e existe um campo para pesquisar pelo título da música. Você digita uma palavra-chave e fica aguardando a lista das músicas/clips. Caso o site não localize, é necessário retornar essa informação.</p><br>
+        <p>Observe o código a seguir:</p><br>
+        <p><img src="img/cap07/exemplo_filtrar_dados1.png" alt="Imagem"></p><br>
+        <p>Como fazer esse script apresentar uma mensagem indicando que não há idades maiores que 18 na lista ?</p><br>
+        <p>A solução para esse cenário é utilizar uma <span>variável de controle (flag ou sinalizador)</span>. Essa variável recebe um valor antes do <span>for</span>, caso a condição do <span>if</span> seja verdadeira, a <span>flag</span> muda de valor. Após o <span>for</span>, é verificado se a <span>flag</span> mantém o valor inicial.</p><br>
+        <p><img src="img/cap07/exemplo_filtrar_dados2.png" alt="Imagem"></p><br>
+        <p><span>IMPORTANTE</span>: Também poderíamos atribuir 0 (false) e 1 (true) para a variável flag.</p><br><br>
+        <h3>Classificar os Itens do Vetor</h3><br>
+        <p>Javascript dispõe do método <span>sort( )</span> para classificar os itens de um vetor em ordem alfabética crescente. O método <span>reverse( )</span> inverte a ordem dos elementos de um Array.</p><br>
+        <p><span>IMPORTANTE</span>: O <span>reverse( )</span> não ordena de forma alfabética decrescente, ele inverte a ordem dos elementos de um Array, colocando o último elemento em primeiro, o penúltimo em segundo e assim sucessivamente.</p><br>
+        <p><img src="img/cap07/metodo_sort.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/metodo_reverse.png" alt="Imagem"></p><br>
+        <p>Caso seja necessário manter a lista na ordem original, é possível criar uma cópia da lista/vetor original através do método <span>slice( )</span>. Sem parâmetros, o <span>slice( )</span> obtém uma cópia com todos os elementos do vetor original.</p><br>
+        <p><img src="img/cap07/metodo_slice.png" alt="Imagem"></p><br>
+        <p>Um detalhe importante sobre as ordenações de listas é que os dados dos vetores/arrays são classificados como strings, mesmo que seu conteúdo seja formado por números. Quando são números, a comparação é realizada da esquerda pra direita, caractere por caractere. Primeiramente é comparado o primeiro caractere, depois o segundo e assim por diante.</p><br>
+        <p><img src="img/cap07/metodo_sort_numeros.png" alt="Imagem"></p><br>
+        <p>Para os números serem organizados em ordem crescente deve-se passar uma função <span>(callback)</span> como parâmetro em <span>sort( )</span>.</p><br>
+        <p>Essa função compara cada elemento do vetor. Os dois parâmetro <span>a</span> e <span>b</span> são substituidos por dois elementos de dentro do vetor e são comparados. É realizado três comparações, se <span>a</span> é maior que <span>b</span>, se <span>a</span> é menor que <span>b</span> ou se <span>a</span> é igual a <span>b</span>. O resultado do método <span>sort( )</span> com a função(como parâmentro) é um Array ordenado em ordem crescente.</p><br>
+        <p><img src="img/cap07/metodo_sort_funcao.png" alt="Imagem"></p><br><br>
+        <h3>Método every( )</h3><br>
+        <p>O método <span>every( )</span> testa se todos os elementos do array passam pelo teste implementado pela função fornecida.</p><br>
+        <p>A partir do <span>ES5</span>, o tipo Array do JavaScript fornece um método chamado <span>every( )</span> que testa todos os elementos do array.</p><br>
+        <p>O exemplo a seguir usa o <span>every()</span> para verificar se cada elemento do array numbers é maior que zero:</p><br>
+        <p><img src="img/cap07/metodo_every1.png" alt="Imagem"></p><br>
+        <p>O exemplo a seguir testa se todos os elementos do array são números pares.</p><br>
+        <p><img src="img/cap07/metodo_every3.png" alt="Imagem"></p><br>
+        <p>Por outro lado, o exemplo a seguir testa se todos os elementos do array são números ímpares.</p><br>
+        <p><img src="img/cap07/metodo_every4.png" alt="Imagem"></p><br>
+        <p>No exemplo abaixo, o metodo <span>every()</span> verifica se cada item dentro do vetor <span>numeros1</span> é igual a cada item dentro do vetor <span>numeros2</span>.</p><br>
+        <p><img src="img/cap07/metodo_every5.png" alt="Imagem"></p><br><br>
+        <h3>Exercícios</h3><br>
+        <p><strong>a )</strong> Faça um programa que leia um vetor de 5 números inteiros e mostre-os.</p><br>
+        <p><img src="img/cap07/exercicios/a1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/a2.png" alt="Imagem"></p><br>
+        <p>Primeiramente temos o <span>vetor numeros</span>, onde serão inseridos os números digitados. Em seguida temos todas as referências que farão a ligação com os <span>elementos Html</span> através dos <span>id's</span>. O <span>querySelector</span> é parecido com o <span>getElementById</span>, porém no <span>querySelector</span> devemos informar se o que pegaremos (dentro do HTML) será um <span>id</span> ou uma <span>class</span>. Se for um <span>id</span> usamos o <span>hash ( # )</span> e se for uma <span>class</span> usamos o <span>ponto ( . )</span>.</p><br>
+        <p>Em seguida temos a função <span>adicionarNumeros</span>. No início da função, capturamos através do comando <span>value</span> os valores que foram digitados dentro dos <span>input's</span> no <span>Html</span> e os convertemos em números com o comando <span>Number</span>. Cada valor é inserido em uma variável.</p><br>
+        <p>Todos os valores são inseridos dentro do <span>vetor numeros</span> através do comando <span>push</span>. O <span>push</span> tem a função de inserir um elemento no final do vetor. Quando são inseridos diversos valores de uma só vez, a ordem fica da forma em que foram colocados no <span>push</span>.</p><br>
+        <p>Dentro do <span>Html</span> temos um <span>h3</span> que tem uma tag <span>span</span> com o <span>id="outSaida"</span>. Na tag <span>span</span> é onde ficará localizado o conteúdo com os elementos do <span>array</span>. Esse conteúdo é inserido através do comando <span>innerHTML</span>. O método <span>join()</span> tem a função de exibir o conteúdo do vetor. No método <span>join()</span> podemos indicar qual caractere vai separar os itens.</p><br>
+        <p>O botão <span>Adicionar</span> que se encontra dentro do <span>Html</span> possui um <span>id="btAdicionar"</span>. O método <span>addEventListener()</span> executa uma <span>função</span> de acordo com algum <span>evento</span>. Nesse caso ele irá executar a função <span>adicionarNumeros</span> caso o evento de <span>click</span> ocorra no botão <span>Adicionar</span>.</p><br>
+        <p><img src="img/cap07/exercicios/a3.png" alt="Imagem"></p><br>
+        <p><strong>b )</strong> Faça um programa que leia um vetor de 5 números reais e mostre-os na ordem inversa.</p><br>
+        <p><img src="img/cap07/exercicios/b1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/b2.png" alt="Imagem"></p><br>
+        <p>Primeiramente temos o <span>vetor numeros</span>, onde serão inseridos os números digitados. Em seguida temos todas as referências que farão a ligação com os <span>elementos Html</span> através dos <span>id's</span>. O <span>querySelector</span> é parecido com o <span>getElementById</span>, porém no <span>querySelector</span> devemos informar se o que pegaremos (dentro do HTML) será um <span>id</span> ou uma <span>class</span>. Se for um <span>id</span> usamos o <span>hash ( # )</span> e se for uma <span>class</span> usamos o <span>ponto ( . )</span>.</p><br>
+        <p>Em seguida temos a função <span>adicionarNumero</span>. No início da função, capturamos através do comando <span>value</span> os valores que foram digitados dentro dos <span>input's</span> no <span>Html</span> e os convertemos em números com o comando <span>Number</span>. Cada valor é inserido em uma variável.</p><br>
+        <p>Todos os valores são inseridos dentro do <span>vetor numeros</span> através do comando <span>push</span>. O <span>push</span> tem a função de inserir um elemento no final do vetor. Quando são inseridos diversos valores de uma só vez, a ordem fica da forma em que foram colocados no <span>push</span>.</p><br>
+        <p>Em seguida temos o método <span>reverse()</span> que irá inverter a ordem dos elementos do array. O último elemento será o primeiro, o penúltimo será o segundo e assim sucessivamente.</p><br>
+        <p>Dentro do <span>Html</span> temos um <span>h3</span> que tem uma tag <span>span</span> com o <span>id="outSaida"</span>. Na tag <span>span</span> é onde ficará localizado o conteúdo com os elementos do <span>array</span>. Esse conteúdo é inserido através do comando <span>innerHTML</span>. O método <span>join()</span> tem a função de exibir o conteúdo do vetor. No método <span>join()</span> podemos indicar qual caractere vai separar os itens.</p><br>
+        <p>O botão <span>Adicionar</span> que se encontra dentro do <span>Html</span> possui um <span>id="btAdicionar"</span>. O método <span>addEventListener()</span> executa uma <span>função</span> de acordo com algum <span>evento</span>. Nesse caso ele irá executar a função <span>adicionarNumero</span> caso o evento de <span>click</span> ocorra no botão <span>Adicionar</span>.</p><br>
+        <p><img src="img/cap07/exercicios/b3.png" alt="Imagem"></p><br>
+        <p><strong>c )</strong> Faça um programa que leia 4 notas, mostre as notas e a média na tela.</p><br>
+        <p><img src="img/cap07/exercicios/c1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/c2.png" alt="Imagem"></p><br>
+        <p>Primeiramente temos o <span>vetor notas</span>, onde serão inseridos os números digitados. Em seguida temos todas as referências que farão a ligação com os <span>elementos Html</span> através dos <span>id's</span>. O <span>querySelector</span> é parecido com o <span>getElementById</span>, porém no <span>querySelector</span> devemos informar se o que pegaremos (dentro do HTML) será um <span>id</span> ou uma <span>class</span>. Se for um <span>id</span> usamos o <span>hash ( # )</span> e se for uma <span>class</span> usamos o <span>ponto ( . )</span>.</p><br>
+        <p>Em seguida temos a função <span>calcularMedia</span>. No início da função, capturamos através do comando <span>value</span> os valores que foram digitados dentro dos <span>input's</span> no <span>Html</span> e os convertemos em números com o comando <span>Number</span>. Cada valor é inserido em uma variável.</p><br>
+        <p>Todos os valores são inseridos dentro do <span>vetor notas</span> através do comando <span>push</span>. O <span>push</span> tem a função de inserir um elemento no final do vetor. Quando são inseridos diversos valores de uma só vez, a ordem fica da forma em que foram colocados no <span>push</span>.</p><br>
+        <p>Em seguida temos a criação da variável <span>soma</span>, que será uma variável acumuladora.</p><br>
+        <p>Depois temos uma estrutura de repetição <span>for</span>, com o objetivo de percorrer o vetor. A variável acumuladora <span>soma</span> recebe em cada volta do loop o elemento de cada índice do vetor e os soma. No final temos as 4 notas somadas e armazenadas na variável <span>soma</span>.</p><br>
+        <p>Após o <span>for</span>, temos o cálculo da média. Soma dividido por 4. O resultado do cálculo é armazenado na variável <span>soma</span>.</p><br>
+        <p>Dentro do elemento <span>Html</span> que recebeu o <span>id="outNotas"</span> serão exibidas (através do innerHTML) todas as notas do vetor com a ajuda com método <span>join()</span>. O mesmo acontecerá com o elemento Html que possui o <span>id="outMedia"</span>, nesse caso ele exibirá a média seguida de duas casas decimais.</p><br>
+        <p>O botão <span>Calcular Media</span> que se encontra dentro do <span>Html</span> possui um <span>id="btCalcular"</span>. O método <span>addEventListener()</span> executa uma <span>função</span> de acordo com algum <span>evento</span>. Nesse caso ele irá executar a função <span>calcularMedia</span> caso o evento de <span>click</span> ocorra no botão <span>Calcular Media</span>.</p><br>
+        <p><img src="img/cap07/exercicios/c3.png" alt="Imagem"></p><br>
+        <p><strong>d )</strong> Faça um programa que leia 5 números inteiros e armazene-os num vetor. Armazene os números pares no vetor PAR e os números IMPARES no vetor impar. Imprima os três vetores.</p><br>
+        <p><img src="img/cap07/exercicios/d1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/d2.png" alt="Imagem"></p><br>
+        <p>Primeiramente temos a criação de 3 <span>arrays</span>, numeros, pares e impares. Em seguida temos as referências aos elementos Html com o uso do <span>querySelector</span>. Logo após temos a função <span>calcularNumeros</span>. No início da função, os valores digitados dentro dos <span>input's</span> são capturados através do comando <span>value</span> e convertidos em números com o uso do comando <span>Number</span>, em seguida são armazenados em variáveis.</p><br>
+        <p>Através do método <span>push</span>, armazenamos as variáveis no array <span>numeros</span>. A estrutura de repetição <span>for</span> irá percorrer todos os elementos do array numeros. Dentro do loop, temos um <span>if else</span>, se o elemento do array for par, ele será inserido no vetor <span>pares</span>, se o elemento do array for ímpar, ele será inserido no vetor <span>impares</span>.</p><br>
+        <p>Dentro do elemento Html que possui o <span>id="outNumeros"</span>, será exibido todos os elementos do array <span>numeros</span>, o mesmo acontecerá com os outros elementos Html, um exibirá o array <span>pares</span>, o outro exibirá o array <span>impares</span>.</p><br>
+        <p>O botão <span>Calcular</span> que se encontra dentro do <span>Html</span> possui um <span>id="btCalcular"</span>. O método <span>addEventListener()</span> executa uma <span>função</span> de acordo com algum <span>evento</span>. Nesse caso ele irá executar a função <span>calcularNumeros</span> caso o evento de <span>click</span> ocorra no botão <span>Calcular</span>.</p><br>
+        <p><img src="img/cap07/exercicios/d3.png" alt="Imagem"></p><br>
+        <p><strong>e )</strong> Faça um programa que peça o nome do aluno e suas 3 notas. Calcule e armazene num vetor a média de cada aluno. Em seguida, imprima o nome, a média (maior ou igual a 7) e se foi "Aprovado" ou "Reprovado".</p><br>
+        <p><img src="img/cap07/exercicios/e1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/e2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/e3.png" alt="Imagem"></p><br>
+        <p><strong>f )</strong> Faça um programa que leia um vetor de 5 números inteiros, mostre a soma, a multiplicação e os números.</p><br>
+        <p><img src="img/cap07/exercicios/f1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/f2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/f3.png" alt="Imagem"></p><br>
+        <p><strong>g )</strong> Faça um programa que insira números no vetor, calcule e mostre a soma dos quadrados dos elementos do vetor.</p><br>
+        <p><img src="img/cap07/exercicios/g1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/g2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/g3.png" alt="Imagem"></p><br>
+        <p><strong>h )</strong> Escreva um programa de atendimento para uma clínica odontológica. Ao adicionar um paciente, o mesmo irá para o final do vetor e será mostrado na lista. Ao adicionar um paciente como urgência, o mesmo irá para o início do vetor e será o primeiro da lista. Ao clicar no botão atender, o primeiro paciente será inserido no campo "Em Atendimento" e será retirado da lista.</p><br>
+        <p><img src="img/cap07/exercicios/h1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/h2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/h3.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/h4.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/h5.png" alt="Imagem"></p><br>
+        <p><strong>i )</strong> Escreva um programa que leia o modelo e o preço de um carro, e armazene em um vetor. O programa deverá filtrar a lista de carros por preço, onde o cliente informará o valor máximo que possui.</p><br>
+        <p><img src="img/cap07/exercicios/i1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/i2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/i3.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/i4.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/i5.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/i6.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/i7.png" alt="Imagem"></p><br>
+        <p><strong>j )</strong> Escreva um programa que ao inserir números no vetor, informe se os mesmos estão em ordem crescente ou não. O programa deverá impedir a inserção de números repetidos.</p><br>
+        <p><img src="img/cap07/exercicios/j1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/j2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/j3.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/j4.png" alt="Imagem"></p><br>
+        <p><strong>l )</strong> Escreva um programa que leia um candidato, sua quantidade de acertos e os insira em um vetor. Ao clicar no botão Aprovados 2ª Etapa, o programa deverá receber a quantidade de acertos necessários para a aprovação dos candidatos.</p><br>
+        <p><img src="img/cap07/exercicios/l1.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/l2.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/l3.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/l4.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/l5.png" alt="Imagem"></p><br>
+        <p><img src="img/cap07/exercicios/l6.png" alt="Imagem"></p><br><br>
+        <div id="voltar-topo">
+            <a href="#div">Voltar p/ o Topo</a>
+        </div><br><br>
     </div>
 </body>
 </html>
